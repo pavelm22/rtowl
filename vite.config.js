@@ -35,7 +35,7 @@ export default defineConfig({
         port: 5173,
         proxy: {
             '/api': {
-                target: 'http://192.168.188.136:8000',  // Symfony-Backend
+                target: 'http://localhost:8000',  // Symfony-Backend
                 changeOrigin: true,
                 secure: false,
             },

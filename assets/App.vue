@@ -28,9 +28,9 @@ const handleOrbitToggle = () => {
         :loadingProgress="loadingProgress"
         @headerStateChange="handleHeaderState"
     />
-    <Menu
+<!--    <Menu
         @toggle-orbit="handleOrbitToggle"
-    />
+    />-->
     <CookieBanner />
   </div>
 </template>
