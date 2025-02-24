@@ -1,7 +1,9 @@
 <template>
-  <div class="absolute z-100">
-    <div class="fixed top-0 w-full transition-all duration-700 bg-black"
-            :class="{ 'h-screen': !isSmall, 'h-20': isSmall }">
+  <div class="absolute z-5">
+    <div class="fixed top-0 w-full transition-all duration-700"
+            :class="{ 'h-screen': !isSmall, 'h-20': isSmall }"
+            style="background-color: #000000;"
+    >
       <nav class="h-full flex items-center justify-center">
         <div class="container mx-auto flex flex-col items-center">
           <img src="../../assets/img/OWL_LogoWH.png" alt="Logo"
@@ -24,7 +26,10 @@
 
 <script setup>
 import { ref, watch, computed, onMounted } from 'vue';
-console.log('Header.vue');
+
+
+const active = ref(true);
+
 const props = defineProps({
   loadingProgress: {
     type: Number,

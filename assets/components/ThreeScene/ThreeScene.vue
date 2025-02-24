@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen z-[-1]">
+  <div class="absolute w-full h-screen">
     <canvas ref="sceneCanvas" class="w-full h-screen"></canvas>
   </div>
 </template>
@@ -149,9 +149,6 @@ const toggleOrbitMode = () => {
 defineExpose({toggleOrbitMode})
 
 onMounted(() => {
-
-  let textureLoadProgress = 0
-  let modelLoadProgress = 0
   renderer = new THREE.WebGLRenderer({
     antialias: true,
     canvas: sceneCanvas.value
@@ -219,6 +216,7 @@ onMounted(() => {
           if (texture) {  // Falls Textur vorhanden ist, setze sie
             object.material.map = texture;
             object.material.needsUpdate = true;
+            console.log('Texture geladen')
           }
         }
       });
@@ -270,7 +268,7 @@ onMounted(() => {
     );
   }
 
-  //loadTexture('_static/models/bmw_m4_csl_2023/textures/M4xNME_Badge_baseColor.png');
+  loadTexture('_static/models/bmw_m4_csl_2023/textures/M4xNME_Badge_baseColor.png');
   loadModel('_static/models/owl-models/test.gltf');
   // Aufruf nach dem Laden des Modells
   createSmoothOrbitAnimation()

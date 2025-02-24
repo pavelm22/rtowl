@@ -1,12 +1,12 @@
 <!-- MainComponent.vue -->
 <template>
-  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="height: var(--app-height)">
+  <div class="fixed inset-0 pointer-events-none " style="height: var(--app-height)">
     <NavigationHandler
         :activePage="activePage"
         :handleMenuClick="handleMenuClick"
     />
   </div>
-  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="height: var(--app-height)">
+  <div class="fixed inset-0 pointer-events-none " style="height: var(--app-height)">
     <div
         v-show="isMenuOpen"
         class="fixed bottom-20 left-0 right-0 flex justify-center px-4 pointer-events-auto"

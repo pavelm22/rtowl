@@ -13,18 +13,21 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './assets'),
+            'flowbite': '/node_modules/flowbite',
         },
     },
-    root: ".",
-    base: "/build/",
-    publicDir: false,
     build: {
-        reportCompressedSize: true,
-        manifest: true,
-        emptyOutDir: true,
-        assetsDir: "",
         outDir: "./public/build",
         rollupOptions: {
+            output: {
+                manualChunks: undefined,
+                assetFileNames: (assertInfo) => {
+                    if (/\.(jpg|png|gif|svg)$/.test(assertInfo.name)) {
+                        return 'images/[name][extansion]';
+                    }
+                    return 'assets/[name][extansion]';
+                }
+            },
             input: {
                 app: "./assets/app.js"
             },
@@ -33,16 +36,13 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         port: 5173,
-        proxy: {
-            '/api': {
-                target: 'http://192.168.188.136:8000',  // Symfony-Backend
-                changeOrigin: true,
-                secure: false,
-            },
+        origin: 'http://localhost:5173',
+        hmr: {
+            host: 'localhost',
+            protocol: 'ws'
         },
-        hmr: false,
         watch: {
-            usePolling: true
+            usePolling: true,
         }
-    },
+    }
 });

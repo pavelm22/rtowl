@@ -1,3 +1,7 @@
+@import "flowbite/dist/flowbite.min.css";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
