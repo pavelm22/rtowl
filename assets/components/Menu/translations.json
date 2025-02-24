@@ -1,0 +1,30 @@
+{
+  "de": {
+    "navigation": {
+      "about_us": "Über uns",
+      "sponsors": "Sponsoren",
+      "team": "Team",
+      "data_policy": "Datenschutz",
+      "impressum": "Impressum",
+      "contact": "Kontakt"
+    },
+    "social_media": {
+      "instagram": "Instagram",
+      "xing": "Xing"
+    }
+  },
+  "en": {
+    "navigation": {
+      "about_us": "About Us",
+      "sponsors": "Sponsors",
+      "team": "Team",
+      "data_policy": "Privacy Policy",
+      "impressum": "Legal Notice",
+      "contact": "Contact"
+    },
+    "social_media": {
+      "instagram": "Instagram",
+      "xing": "Xing"
+    }
+  }
+}

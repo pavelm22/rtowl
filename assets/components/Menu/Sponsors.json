@@ -1,0 +1,152 @@
+[
+  {
+    "name": "TH OWL",
+    "website": "https://www.th-owl.de",
+    "imagePath": "/_static/img/sponsors/thowl.png"
+  },
+  {
+    "name": "Phoenix Contact",
+    "website": "https://www.phoenixcontact.com/de-de/",
+    "imagePath": "/_static/img/sponsors/phoenixcontact.png"
+  },
+  {
+    "name": "KEB",
+    "website": "https://www.keb-automation.com/de/",
+    "imagePath": "/_static/img/sponsors/keb.png"
+  },
+  {
+    "name": "Metzger und Sohn",
+    "website": "https://www.metzger-und-sohn.de",
+    "imagePath": "/_static/img/sponsors/metzgerundsohn.png"
+  },
+  {
+    "name": "Sollich",
+    "website": "https://www.sollich.com",
+    "imagePath": "/_static/img/sponsors/sollich.png"
+  },
+  {
+    "name": "Siemens",
+    "website": "www.siemens.com/de/de.html",
+    "imagePath": "/_static/img/sponsors/siemens.png"
+  },
+  {
+    "name": "MultiSENSE",
+    "website": "https://multisenses.de",
+    "imagePath": "/_static/img/sponsors/multisenses.png"
+  },
+  {
+    "name": "HG OWL",
+    "website": "https://www.hg-owl-ev.de/start",
+    "imagePath": "/_static/img/sponsors/hglippe.png"
+  },
+  {
+    "name": "Hanning und Kahl",
+    "website": "https://www.hanning-kahl.de/index.html",
+    "imagePath": "/_static/img/sponsors/hanningundkahl.png"
+  },
+  {
+    "name": "SMC",
+    "website": "https://www.smc.eu/de-de",
+    "imagePath": "/_static/img/sponsors/smc.png"
+  },
+  {
+    "name": "E+S Industriebedarf",
+    "website": "https://shop.es-industriebedarf.de",
+    "imagePath": "/_static/img/sponsors/eunds.png"
+  },
+  {
+    "name": "3Dconnexion",
+    "website": "https://3dconnexion.com/de/",
+    "imagePath": "/_static/img/sponsors/3dconnexion.png"
+  },
+  {
+    "name": "Detmold Digital",
+    "website": "https://3d-detmold.com",
+    "imagePath": "/_static/img/sponsors/detmolddigital.png"
+  },
+  {
+    "name": "Beta Layout",
+    "website": "https://de.beta-layout.com/leiterplatten/",
+    "imagePath": "/_static/img/sponsors/beta.png"
+  },
+  {
+    "name": "Warweg Eloxal",
+    "website": "https://www.warweg-eloxal.de",
+    "imagePath": "/_static/img/sponsors/warweg_eloxal.png"
+  },
+  {
+    "name": "Stadtwerke Detmold",
+    "website": "https://www.stadtwerke-detmold.de/",
+    "imagePath": "/_static/img/sponsors/dt_stadtwerke.png"
+  },
+  {
+    "name": "Vector",
+    "website": "https://www.vector.com/de/de/",
+    "imagePath": "/_static/img/sponsors/vector.png"
+  },
+  {
+    "name": "zdi",
+    "website": "https://www.lippe-mint.de/",
+    "imagePath": "/_static/img/sponsors/zdi.png"
+  },
+  {
+    "name": "VDI OWL",
+    "website": "https://www.vdi.de/ueber-uns/vor-ort/bezirksvereine/ostwestfalen-lippe-bezirksverein-ev",
+    "imagePath": "/_static/img/sponsors/owl_lipp_bez.png"
+  },
+  {
+    "name": "Hoffmann Group",
+    "website": "https://www.hoffmann-group.com/DE/de/hom/",
+    "imagePath": "/_static/img/sponsors/hoffman_group.png"
+  },
+  {
+    "name": "AKG Group",
+    "website": "https://www.akg-group.com/de/akg-gruppe/",
+    "imagePath": "/_static/img/sponsors/akg.png"
+  },
+  {
+    "name": "Rosenberger",
+    "website": "https://www.rosenberger.com/de/",
+    "imagePath": "/_static/img/sponsors/rosenberger.png"
+  },
+  {
+    "name": "Anderson Group",
+    "website": "https://www.andersoneurope.com/anderson-gruppe.html",
+    "imagePath": "/_static/img/sponsors/anderson_group.png"
+  },
+  {
+    "name": "Bender",
+    "website": "https://www.bender.de/",
+    "imagePath": "/_static/img/sponsors/bender.png"
+  },
+  {
+    "name": "WR",
+    "website": "https://www.wrausch.de/home/",
+    "imagePath": "/_static/img/sponsors/wr.png"
+  },
+  {
+    "name": "Smart Mechatronics",
+    "website": "https://www.smartmechatronics.de/",
+    "imagePath": "/_static/img/sponsors/smart_mechatronics.png"
+  },
+  {
+    "name": "norelem",
+    "website": "https://norelem.de/de/",
+    "imagePath": "/_static/img/sponsors/norelem.png"
+  },
+  {
+    "name": "Kannegiesser",
+    "website": "https://www.kannegiesser.com/de/de/index.html",
+    "imagePath": "/_static/img/sponsors/kannegiesser.png"
+  },
+  {
+    "name": "Fleischer Elektrotechnik",
+    "website": "https://www.fleischer-elektrotechnik.de/index.htm",
+    "imagePath": "/_static/img/sponsors/fleischer.png"
+  },
+  {
+    "name": "H&R",
+    "website": "https://www.h-r.com/",
+    "imagePath": "/_static/img/sponsors/hundr.png"
+  }
+]
