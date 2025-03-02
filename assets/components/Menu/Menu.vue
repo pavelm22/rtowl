@@ -102,7 +102,7 @@ const menuButtons = [
   { label: 'sponsors', path: '/sponsors' },
   { label: 'team', path: '/team' },
   { label: 'data_policy', path: '/data-policy' },
-  { label: 'impressum', path: '/impressum' },
+  { label: 'legal_notice', path: '/legal-notice' },
   { label: 'contact', path: '/contact' },
 ]
 

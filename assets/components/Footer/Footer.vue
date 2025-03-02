@@ -7,8 +7,8 @@ const router = useRouter()
 const route = useRoute()
 
 // Navigation zu einer benannten Route
-function navigateToImpressum() {
-  router.push({ name: 'impressum' })
+function navigateToLegalNotice() {
+  router.push({ name: 'legal_notice' })
 }
 
 function navigateToDataPolicy() {
@@ -31,7 +31,7 @@ function navigateToContact() {
           <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
           <ul class="space-y-2">
             <li>
-              <a @click="navigateToImpressum()" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
+              <a @click="navigateToLegalNotice()" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
             </li>
             <li>
               <a @click="navigateToDataPolicy()" class="hover:text-white transition-colors cursor-pointer">Datenschutz</a>
