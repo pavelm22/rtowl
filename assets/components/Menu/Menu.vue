@@ -1,12 +1,6 @@
-<!-- MainComponent.vue -->
+<!-- Menu.vue -->
 <template>
-  <div class="fixed inset-0 pointer-events-none " style="height: var(--app-height)">
-    <NavigationHandler
-        :activePage="activePage"
-        :handleMenuClick="handleMenuClick"
-    />
-  </div>
-  <div class="fixed inset-0 pointer-events-none " style="height: var(--app-height)">
+  <div class="fixed inset-0 pointer-events-none" style="height: var(--app-height)">
     <div
         v-show="isMenuOpen"
         class="fixed bottom-20 left-0 right-0 flex justify-center px-4 pointer-events-auto"
@@ -24,9 +18,9 @@
                 v-for="(button, index) in menuButtons"
                 :key="index"
                 class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-500 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64"
-                @click="handleMenuClick(button.action)"
+                @click="handleMenuClick(button.path)"
             >
-              <span>{{ translations.de.navigation?. [button.label] }}</span>
+              <span>{{ translations.de.navigation?.[button.label] }}</span>
             </button>
           </div>
           <div class="grid grid-cols-2 gap-4 justify-items-center">
@@ -90,67 +84,33 @@
       </div>
     </div>
   </div>
-  <AboutUs
-      :handle-menu-click="handleMenuClick"
-      :activePage="activePage"
-  />
-  <Sponsors
-      :handleMenuClick="handleMenuClick"
-      :activePage="activePage"
-      :sponsorsData="sponsorsData"
-  />
-  <Team
-      :activePage="activePage"
-      :teamStructure="teamStructure"
-      :handleMenuClick="handleMenuClick"
-  />
-  <DataPolicy
-      :handleMenuClick="handleMenuClick"
-      :activePage="activePage"
-  />
-  <Impressum
-      :handleMenuClick="handleMenuClick"
-      :activePage="activePage"
-  />
-  <Contact
-      :active-page="activePage"
-      :handleMenuClick="handleMenuClick"/>
 </template>
 
 <script setup>
-import {ref, onMounted, onUnmounted, computed} from 'vue'
-import AboutUs from "../Pages/AboutUs/AboutUs.vue"
-import Team from "../Pages/Team/Team.vue"
-import DataPolicy from "../Pages/DataPolicy/DataPolicy.vue"
-import Impressum from "../Pages/Impressum/Impressum.vue"
-import Sponsors from "../Pages/Sponsors/Sponsors.vue"
-import NavigationHandler from "../NavigationHandler/NavigationHandler.vue"
-import sponsorsData from "./Sponsors.json"
-import teamStructure from "./TeamStructure.json"
-import translations from "./translations.json"
-import Contact from "../Pages/Contact/Contact.vue";
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import translations from '../Menu/translations.json'
 
 const emit = defineEmits(['toggleOrbit'])
 const isMenuOpen = ref(false)
 const is360Active = ref(false)
-
-const activePage = ref('')
-
+const router = useRouter()
+const route = useRoute()
 
 const menuButtons = [
-  {label: 'about_us', action: 'aboutUs'},
-  {label: 'sponsors', action: 'sponsors'},
-  {label: 'team', action: 'team'},
-  {label: 'data_policy', action: 'data_policy'},
-  {label: 'impressum', action: 'impressum'},
-  {label: 'contact', action: 'contact'},
+  { label: 'about_us', path: '/about-us' },
+  { label: 'sponsors', path: '/sponsors' },
+  { label: 'team', path: '/team' },
+  { label: 'data_policy', path: '/data-policy' },
+  { label: 'impressum', path: '/impressum' },
+  { label: 'contact', path: '/contact' },
 ]
 
-const handleMenuClick = (action) => {
-  if (action === activePage.value) {
-    activePage.value = '';
+const handleMenuClick = (path) => {
+  if (route.path === path) {
+    router.push('/')
   } else {
-    activePage.value = action;
+    router.push(path)
   }
 
   isMenuOpen.value = false

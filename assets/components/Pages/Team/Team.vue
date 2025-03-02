@@ -6,15 +6,6 @@ import ContactCTA from "../../CTA/Contact/ContactCTA.vue";
 import Footer from "../../Footer/Footer.vue";
 
 const props = defineProps({
-  activePage: {
-    type: String,
-    default: '',
-    required: true,
-  },
-  handleMenuClick: {
-    type: Function,
-    required: true,
-  },
   teamStructure: {
     type: Array,
     required: true,

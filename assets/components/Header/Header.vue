@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute z-5">
+  <div class="absolute z-50">
     <div class="fixed top-0 w-full transition-all duration-700"
             :class="{ 'h-screen': !isSmall, 'h-20': isSmall }"
             style="background-color: #000000;"
@@ -8,8 +8,8 @@
         <div class="container mx-auto flex flex-col items-center">
           <img src="../../assets/img/OWL_LogoWH.png" alt="Logo"
                class="transition-all duration-700"
-               :class="{ 'h-[200px]': !isSmall, 'h-[5rem]': isSmall }">
-          <div v-if="isLoading" class="mt-8 w-[300px] transition-opacity duration-300">
+               :style="{ height: isSmall ? '5rem' : '200px' }">
+          <div v-if="isLoading" class="mt-8 transition-opacity duration-300" style="width: 300px;">
             <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
               <div class="h-full bg-white transition-all duration-300 rounded-full"
                    :style="{ width: `${loadingProgress}%` }"></div>
@@ -26,9 +26,6 @@
 
 <script setup>
 import { ref, watch, computed, onMounted } from 'vue';
-
-
-const active = ref(true);
 
 const props = defineProps({
   loadingProgress: {
