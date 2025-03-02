@@ -1,11 +1,23 @@
 <script setup>
-const props = defineProps({
-  handleMenuClick: {
-    type: Function,
-    required: true
-  }
-})
+import { useRouter, useRoute } from "vue-router";
+// Router-Instanz für Navigation
+const router = useRouter()
 
+// Aktuelle Route für Zugriff auf Parameter, Query-Strings, etc.
+const route = useRoute()
+
+// Navigation zu einer benannten Route
+function navigateToImpressum() {
+  router.push({ name: 'impressum' })
+}
+
+function navigateToDataPolicy() {
+  router.push({ name: 'data-policy' })
+}
+
+function navigateToContact() {
+  router.push({ name: 'contact' })
+}
 </script>
 
 <template>
@@ -19,10 +31,10 @@ const props = defineProps({
           <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
           <ul class="space-y-2">
             <li>
-              <a @click="handleMenuClick('impressum')" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
+              <a @click="navigateToImpressum()" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
             </li>
             <li>
-              <a @click="handleMenuClick('data_policy')" class="hover:text-white transition-colors cursor-pointer">Datenschutz</a>
+              <a @click="navigateToDataPolicy()" class="hover:text-white transition-colors cursor-pointer">Datenschutz</a>
             </li>
           </ul>
         </div>
@@ -49,7 +61,7 @@ const props = defineProps({
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <div class="space-y-2">
             <div>
-              <a @click="handleMenuClick('contact')" class="hover:text-white transition-colors cursor-pointer">Kontakt Formular</a>
+              <a @click="navigateToContact()" class="hover:text-white transition-colors cursor-pointer">Kontakt Formular</a>
             </div>
             <div>
               <a href="mailto:info@example.com" class="hover:text-white transition-colors">

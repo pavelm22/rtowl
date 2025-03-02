@@ -1,11 +1,5 @@
 // src/router.js
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutUsViewView from '../views/AboutUsView.vue'
-import Team from '../components/Pages/Team/Team.vue'
-import DataPolicy from '../components/Pages/DataPolicy/DataPolicy.vue'
-import Impressum from '../components/Pages/Impressum/Impressum.vue'
-import Sponsors from '../components/Pages/Sponsors/Sponsors.vue'
-import Contact from '../components/Pages/Contact/Contact.vue'
 
 const routes = [
     {
