@@ -2,10 +2,12 @@ import { defineConfig } from "vite";
 import symfonyPlugin from "vite-plugin-symfony";
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
     plugins: [
         vue(),
+        tailwindcss(),
         symfonyPlugin({
             viteDevServerHostname: 'localhost'
         }),
@@ -13,7 +15,6 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './assets'),
-            'flowbite': '/node_modules/flowbite',
         },
     },
     build: {
