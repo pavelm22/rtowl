@@ -9,8 +9,7 @@
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">ENGINEERING<br>THE FUTURE<br>OF RACING</h1>
         <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">A team of passionate engineering students dedicated to designing, building, and racing formula-style vehicles in international competitions.</p>
         <a href="#team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-300">
-          UNSER TEAM
-          <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          UNSER TEAM <ArrowIcon />
         </a>
       </div>
     </section>
@@ -207,6 +206,7 @@ import {onMounted} from 'vue'
 import PageLayout from '../../PageLayout/PageLayout.vue'
 import Footer from '../../Footer/Footer.vue'
 import ContactCTA from '../../CTA/Contact/ContactCTA.vue'
+import ArrowIcon from "@/components/Icons/ArrowIcon.vue";
 
 // Component logic here
 onMounted(() => {

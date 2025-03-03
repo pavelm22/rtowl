@@ -44,43 +44,17 @@
             class="p-2 rounded-full hover:bg-gray-900 flex items-center justify-center w-10 h-10 border-2 border-red-800"
             :class="is360Active ? 'bg-blue-100' : 'hover:bg-gray-100 bg-black'"
         >
-          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
-               stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-                d="M14 6a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-3"></path>
-            <path
-                d="M3 5h2.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-2.5"></path>
-            <path d="M17 7v4a2 2 0 1 0 4 0v-4a2 2 0 1 0 -4 0z"></path>
-            <path d="M3 16c0 1.657 4.03 3 9 3s9 -1.343 9 -3"></path>
-          </svg>
+          <Icon3D />
         </button>
 
-        <button
-            @click="toggleMenu"
-            class="p-2 rounded-full hover:bg-gray-900 bg-black flex items-center justify-center w-10 h-10 border-2 border-red-800"
-        >
-          <div class="relative w-6 h-6">
-            <span
-                :class="[
-                'absolute left-1/2 -translate-x-1/2 w-6 h-0.5 bg-red-700 transform transition-all duration-300',
-                isMenuOpen ? 'rotate-45 top-3' : 'top-1'
-              ]"
-            ></span>
-            <span
-                :class="[
-                'absolute left-1/2 -translate-x-1/2 w-6 h-0.5 bg-red-700 top-3 transition-opacity duration-300',
-                isMenuOpen ? 'opacity-0' : 'opacity-100'
-              ]"
-            ></span>
-            <span
-                :class="[
-                'absolute left-1/2 -translate-x-1/2 w-6 h-0.5 bg-red-700 transform transition-all duration-300',
-                isMenuOpen ? '-rotate-45 top-3' : 'top-5'
-              ]"
-            ></span>
-          </div>
-        </button>
+        <div>
+          <button
+              @click="toggleMenu"
+              class="p-2 rounded-full hover:bg-gray-900 bg-black flex items-center justify-center w-10 h-10 border-2 border-red-800"
+          >
+            <MenuIcon :isOpen="isMenuOpen"/>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -90,7 +64,8 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import translations from '../Menu/translations.json'
-
+import Icon3D from '../Icons/3DIcon.vue'
+import MenuIcon from '../Icons/MenuIcon.vue'
 const emit = defineEmits(['toggleOrbit'])
 const isMenuOpen = ref(false)
 const is360Active = ref(false)
