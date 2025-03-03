@@ -48,9 +48,9 @@ const routes = [
         }
     },
     {
-        path: '/impressum',
-        name: 'impressum',
-        component: () => import('../views/ImpressumView.vue'),
+        path: '/legal-notice',
+        name: 'legal_notice',
+        component: () => import('../views/LegalNoticeView.vue'),
         meta: {
             showThreeScene: true,
             title: 'OWL Racing - Impressum'
