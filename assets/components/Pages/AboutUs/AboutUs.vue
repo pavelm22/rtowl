@@ -5,10 +5,10 @@
         <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
       </div>
       <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">Formula Student Racing Club</span>
+        <span class="inline-block py-1 px-3 mb-4 bg-red-700 text-black font-bold text-xs uppercase tracking-widest">Formula Student Racing Club</span>
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">ENGINEERING<br>THE FUTURE<br>OF RACING</h1>
         <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">A team of passionate engineering students dedicated to designing, building, and racing formula-style vehicles in international competitions.</p>
-        <a href="#team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-300">
+        <a href="#team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-700 hover:bg-red-600 rounded-lg transition-colors duration-300">
           UNSER TEAM <ArrowIcon />
         </a>
       </div>
@@ -16,21 +16,21 @@
     <section class="py-16 lg:py-24 bg-black">
       <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Our mission</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our mission</span>
           <h2 class="mt-2 text-3xl font-bold text-white md:text-4xl">PUSHING THE LIMITS OF INNOVATION AND PERFORMANCE</h2>
           <p class="mt-4 text-gray-300">Founded in 2012, our Formula Student Racing Club has been competing in international Formula Student competitions, representing our university with pride and determination.</p>
           <p class="mt-4 text-gray-300">We bring together students from engineering, design, business, and marketing to create a comprehensive team that handles every aspect of designing, manufacturing, testing, and racing our formula-style vehicles.</p>
           <div class="mt-8">
             <div class="flex items-center mb-4">
-              <div class="w-2 h-2 bg-red-600 mr-2"></div>
+              <div class="w-2 h-2 bg-red-700 mr-2"></div>
               <p class="text-white font-medium">Student-led engineering excellence</p>
             </div>
             <div class="flex items-center mb-4">
-              <div class="w-2 h-2 bg-red-600 mr-2"></div>
+              <div class="w-2 h-2 bg-red-700 mr-2"></div>
               <p class="text-white font-medium">Real-world application of academic knowledge</p>
             </div>
             <div class="flex items-center">
-              <div class="w-2 h-2 bg-red-600 mr-2"></div>
+              <div class="w-2 h-2 bg-red-700 mr-2"></div>
               <p class="text-white font-medium">Fostering teamwork and leadership</p>
             </div>
           </div>
@@ -43,41 +43,41 @@
     <section id="team" class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Our team</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our team</span>
           <h2 class="mt-2 text-3xl font-bold  md:text-4xl">THE DRIVING FORCE BEHIND OUR SUCCESS</h2>
           <p class="mt-4 text-gray-900 max-w-2xl mx-auto">Our diverse team brings together expertise from various engineering disciplines to create championship-winning formula cars.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Team Member 1 -->
-          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300">
+          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
             <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">Alex Johnson</h3>
-              <p class="text-red-600 mb-4 font-semibold">Team Captain & Chief Engineer</p>
+              <p class="text-red-700 mb-4 font-semibold">Team Captain & Chief Engineer</p>
               <p class="text-gray-300">Mechanical Engineering student with a passion for motorsport and vehicle dynamics.</p>
             </div>
           </div>
           <!-- Team Member 2 -->
-          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300">
+          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
             <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">Samantha Lee</h3>
-              <p class="text-red-600 mb-4 font-semibold">Powertrain Lead</p>
+              <p class="text-red-700 mb-4 font-semibold">Powertrain Lead</p>
               <p class="text-gray-300">Electrical Engineering student specializing in electric vehicle propulsion systems.</p>
             </div>
           </div>
           <!-- Team Member 3 -->
-          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300">
+          <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
             <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">Marcus Chen</h3>
-              <p class="text-red-600 mb-4 font-semibold">Aerodynamics Engineer</p>
+              <p class="text-red-700 mb-4 font-semibold">Aerodynamics Engineer</p>
               <p class="text-gray-300">Aerospace Engineering student focused on computational fluid dynamics and aero design.</p>
             </div>
           </div>
         </div>
         <div class="text-center mt-12">
-          <a href="/team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-300">
+          <a href="/team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-700 hover:bg-red-600 rounded-lg transition-colors duration-300">
             MEET THE FULL TEAM
           </a>
         </div>
@@ -89,7 +89,7 @@
       <div class="absolute bottom-0 left-0 w-64 h-full checkered-border opacity-10"></div>
       <div class="max-w-screen-xl mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Our achievements</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our achievements</span>
           <h2 class="mt-2 text-3xl font-bold text-white md:text-4xl">RACING TO EXCELLENCE</h2>
           <p class="mt-4 text-gray-300 max-w-2xl mx-auto">Each season brings new challenges and opportunities for innovation as we develop our next generation racing machine.</p>
         </div>
@@ -100,9 +100,9 @@
           <div class="bg-white rounded-lg overflow-hidden group">
             <div class="relative">
               <!--            <img src="/api/placeholder/400/300" alt="FS-X22 Racing Car" class="w-full h-56 object-cover">-->
-              <div class="absolute top-0 left-0 bg-red-600 text-black py-1 px-4 font-bold">2024</div>
+              <div class="absolute top-0 left-0 bg-red-700 text-black py-1 px-4 font-bold">2024</div>
             </div>
-            <div class="p-6 border-t-4 border-red-600">
+            <div class="p-6 border-t-4 border-red-700">
               <h3 class="text-xl font-bold ">FS-X24</h3>
               <p class="text-gray-900 my-4">Our latest electric vehicle featuring advanced aerodynamics and a custom battery management system.</p>
               <ul class="text-sm text-gray-800">
@@ -117,9 +117,9 @@
           <div class="bg-white rounded-lg overflow-hidden group">
             <div class="relative">
               <!--            <img src="/api/placeholder/400/300" alt="FS-X23 Racing Car" class="w-full h-56 object-cover">-->
-              <div class="absolute top-0 left-0 bg-red-600 text-black py-1 px-4 font-bold">2023</div>
+              <div class="absolute top-0 left-0 bg-red-700 text-black py-1 px-4 font-bold">2023</div>
             </div>
-            <div class="p-6 border-t-4 border-red-600">
+            <div class="p-6 border-t-4 border-red-700">
               <h3 class="text-xl font-bold ">FS-X23</h3>
               <p class="text-gray-900 my-4">Our breakthrough electric vehicle with lightweight composite chassis and adaptive suspension.</p>
               <ul class="text-sm text-gray-800">
@@ -134,9 +134,9 @@
           <div class="bg-white rounded-lg overflow-hidden group">
             <div class="relative">
               <!--            <img src="/api/placeholder/400/300" alt="FS-X22 Racing Car" class="w-full h-56 object-cover">-->
-              <div class="absolute top-0 left-0 bg-red-600 text-black py-1 px-4 font-bold">2022</div>
+              <div class="absolute top-0 left-0 bg-red-700 text-black py-1 px-4 font-bold">2022</div>
             </div>
-            <div class="p-6 border-t-4 border-red-600">
+            <div class="p-6 border-t-4 border-red-700">
               <h3 class="text-xl font-bold ">FS-X22</h3>
               <p class="text-gray-900 my-4">Our first competition vehicle featuring a combustion engine and custom ECU programming.</p>
               <ul class="text-sm text-gray-800">
@@ -154,7 +154,7 @@
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Our sponsors</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our sponsors</span>
           <h2 class="mt-2 text-3xl font-bold  md:text-4xl">POWERED BY PARTNERS</h2>
           <p class="mt-4 text-gray-900 max-w-2xl mx-auto">We are grateful for the support of our sponsors who make our racing dreams possible.</p>
         </div>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="mt-12 text-center">
-          <a href="/contact" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-600 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
+          <a href="/contact" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
             BECOME A SPONSOR
           </a>
         </div>

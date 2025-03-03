@@ -37,7 +37,6 @@
       </div>
     </section>
 
-    <!-- Sponsors Grid Section -->
     <section class="py-16 lg:py-24 bg-gray-100">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
@@ -48,7 +47,6 @@
           </p>
         </div>
 
-        <!-- Sponsors Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <div
               v-for="sponsor in sponsorsData"
@@ -94,7 +92,6 @@
       </div>
     </section>
 
-    <!-- Sponsorship Benefits Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
@@ -106,7 +103,6 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Benefit 1 -->
           <div class="bg-gray-100 rounded-lg p-8 text-center">
             <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <MouseClickIcon/>
@@ -118,7 +114,6 @@
             </p>
           </div>
 
-          <!-- Benefit 2 -->
           <div class="bg-gray-100 rounded-lg p-8 text-center">
             <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <CommunityIcon/>
@@ -130,7 +125,6 @@
             </p>
           </div>
 
-          <!-- Benefit 3 -->
           <div class="bg-gray-100 rounded-lg p-8 text-center">
             <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <LabIcon/>

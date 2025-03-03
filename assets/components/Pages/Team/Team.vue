@@ -1,6 +1,5 @@
 <template>
   <PageLayout :show="true">
-    <!-- Hero Section - Similar to About-US -->
     <section class="relative">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
@@ -17,7 +16,6 @@
       </div>
     </section>
 
-    <!-- Team Introduction Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
@@ -37,7 +35,6 @@
       </div>
     </section>
 
-    <!-- Team Leadership Section - With modern styling -->
     <section class="py-16 lg:py-24 bg-black">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
@@ -68,7 +65,6 @@
       </div>
     </section>
 
-    <!-- Subteams Section with Tabs - Keeping functionality but with modern styling -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
@@ -77,7 +73,6 @@
           <p class="mt-4 text-gray-700 max-w-2xl mx-auto">Entdecken Sie die verschiedenen Teams, die unser Rennwagen zum Leben erwecken.</p>
         </div>
 
-        <!-- Tab Navigation - keeping the tab functionality -->
         <div class="flex flex-wrap justify-center gap-4 mb-16">
           <button
               v-for="team in subTeams"
@@ -93,7 +88,6 @@
           </button>
         </div>
 
-        <!-- Tab Content - keeping functionality but with modern styling -->
         <div class="tab-content">
           <div
               v-for="team in subTeams"

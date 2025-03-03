@@ -1,12 +1,9 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-// Router-Instanz für Navigation
 const router = useRouter()
 
-// Aktuelle Route für Zugriff auf Parameter, Query-Strings, etc.
 const route = useRoute()
 
-// Navigation zu einer benannten Route
 function navigateToLegalNotice() {
   router.push({ name: 'legal_notice' })
 }
@@ -23,10 +20,7 @@ function navigateToContact() {
 <template>
   <div class="bg-black text-white">
     <div class="container mx-auto px-6 py-8">
-      <!-- Grid Container -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-        <!-- Legal Links - First on md+ screens, Second on mobile -->
         <div class="order-2 md:order-1">
           <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
           <ul class="space-y-2">
@@ -39,7 +33,6 @@ function navigateToContact() {
           </ul>
         </div>
 
-        <!-- Social Media - First on mobile, Second on md+ screens -->
         <div class="order-1 md:order-2">
           <h3 class="text-white font-semibold mb-4">Social Media</h3>
           <div class="flex justify-center space-x-6">
@@ -56,7 +49,6 @@ function navigateToContact() {
           </div>
         </div>
 
-        <!-- Contact Info - Third on both mobile and md+ screens -->
         <div class="order-3">
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <div class="space-y-2">
@@ -77,7 +69,6 @@ function navigateToContact() {
         </div>
       </div>
 
-      <!-- Copyright -->
       <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
         <p>© 2024 Technische Hochschule Ostwestfalen-Lippe, OWL Racing-Team. Alle Rechte vorbehalten.</p>
       </div>

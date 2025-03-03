@@ -6,7 +6,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
       </div>
       <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
+        <span class="inline-block py-1 px-3 mb-4 bg-red-700 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">KONTAKT</h1>
         <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
           Gerne sind wir für Sie telefonisch, per Email oder über unser Kontaktformular erreichbar.
@@ -19,7 +19,7 @@
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Kontakt</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Kontakt</span>
           <h2 class="mt-2 text-3xl font-bold md:text-4xl">SPRECHEN SIE UNS AN</h2>
           <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
             Haben Sie Fragen oder Anregungen? Wir freuen uns auf Ihre Nachricht und melden uns schnellstmöglich bei Ihnen zurück.
@@ -33,7 +33,7 @@
 
             <div class="space-y-6">
               <div class="flex items-center">
-                <div class="bg-black text-red-600 rounded-full p-3 mr-4 flex-shrink-0">
+                <div class="bg-black text-red-700 rounded-full p-3 mr-4 flex-shrink-0">
                   <PhoneIcon />
                 </div>
                 <div>
@@ -43,7 +43,7 @@
               </div>
 
               <div class="flex items-center">
-                <div class="bg-black text-red-600 rounded-full p-3 mr-4 flex-shrink-0">
+                <div class="bg-black text-red-700 rounded-full p-3 mr-4 flex-shrink-0">
                   <EmailIcon />
                 </div>
                 <div>
@@ -53,7 +53,7 @@
               </div>
 
               <div class="flex items-center">
-                <div class="bg-black text-red-600 rounded-full p-3 mr-4 flex-shrink-0">
+                <div class="bg-black text-red-700 rounded-full p-3 mr-4 flex-shrink-0">
                   <LocationIcon />
                 </div>
                 <div>
@@ -66,10 +66,10 @@
             <div class="mt-10">
               <h4 class="font-bold text-lg mb-4">Folgen Sie uns</h4>
               <div class="flex space-x-4">
-                <a href="#" class="bg-black text-red-600 p-3 rounded-full hover:bg-red-600 hover:text-black transition-colors duration-300">
+                <a href="#" class="bg-black text-red-700 p-3 rounded-full hover:bg-red-600 hover:text-black transition-colors duration-300">
                   <FacebookIcon />
                 </a>
-                <a href="#" class="bg-black text-red-600 p-3 rounded-full hover:bg-red-600 hover:text-black transition-colors duration-300">
+                <a href="#" class="bg-black text-red-700 p-3 rounded-full hover:bg-red-600 hover:text-black transition-colors duration-300">
                   <!-- Instagram SVG icon -->
                   <InstagramIcon  />
                 </a>
@@ -90,7 +90,7 @@
                     :class="{ 'border-red-500': errors.name }"
                     placeholder="Max Mustermann"
                 >
-                <p v-if="errors.name" class="mt-2 text-sm text-red-600">{{ errors.name }}</p>
+                <p v-if="errors.name" class="mt-2 text-sm text-red-700">{{ errors.name }}</p>
               </div>
 
               <div class="mb-6">
@@ -103,7 +103,7 @@
                     :class="{ 'border-red-500': errors.email }"
                     placeholder="name@company.com"
                 >
-                <p v-if="errors.email" class="mt-2 text-sm text-red-600">{{ errors.email }}</p>
+                <p v-if="errors.email" class="mt-2 text-sm text-red-700">{{ errors.email }}</p>
               </div>
 
               <div class="mb-6">
@@ -120,7 +120,7 @@
                   <option value="feedback">Feedback</option>
                   <option value="other">Sonstiges</option>
                 </select>
-                <p v-if="errors.reason" class="mt-2 text-sm text-red-600">{{ errors.reason }}</p>
+                <p v-if="errors.reason" class="mt-2 text-sm text-red-700">{{ errors.reason }}</p>
               </div>
 
               <div class="mb-6">
@@ -145,7 +145,7 @@
                     placeholder="Ihre Nachricht..."
                 ></textarea>
                 <div class="flex justify-between mt-1">
-                  <p v-if="errors.message" class="text-sm text-red-600">{{ errors.message }}</p>
+                  <p v-if="errors.message" class="text-sm text-red-700">{{ errors.message }}</p>
                   <p class="text-sm text-gray-500">{{ formData.message.length }}/{{ maxLength }}</p>
                 </div>
               </div>
@@ -165,7 +165,7 @@
     <section class="py-16 lg:py-24 bg-gray-100">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Standort</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Standort</span>
           <h2 class="mt-2 text-3xl font-bold md:text-4xl">BESUCHEN SIE UNS</h2>
           <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
             Wir freuen uns über Ihren Besuch in unserem Innovations Campus in Lemgo.

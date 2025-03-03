@@ -17,7 +17,7 @@
             <button
                 v-for="(button, index) in menuButtons"
                 :key="index"
-                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-500 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64"
+                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-700 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64"
                 @click="handleMenuClick(button.path)"
             >
               <span>{{ translations.de.navigation?.[button.label] }}</span>
@@ -25,11 +25,11 @@
           </div>
           <div class="grid grid-cols-2 gap-4 justify-items-center">
             <button
-                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-500 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64">
+                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-700 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64">
               Instagram
             </button>
             <button
-                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-500 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64">
+                class="transition-colors text-center duration-300 bg-black hover:bg-neutral-800 border-2 border-red-700 rounded text-white p-3 cursor-pointer w-full sm:w-64 md:w-56 lg:w-64">
               Xing
             </button>
           </div>
