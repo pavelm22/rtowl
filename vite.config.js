@@ -22,11 +22,11 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: undefined,
-                assetFileNames: (assertInfo) => {
-                    if (/\.(jpg|png|gif|svg)$/.test(assertInfo.name)) {
-                        return 'images/[name][extansion]';
+                assetFileNames: (assetInfo) => {
+                    if (/\.(jpg|png|gif|svg)$/.test(assetInfo.name)) {
+                        return 'images/[name].[ext]';  // Use [ext] instead of [extension]
                     }
-                    return 'assets/[name][extansion]';
+                    return 'assets/[name].[ext]';  // Use [ext] instead of [extension]
                 }
             },
             input: {
@@ -37,6 +37,7 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         port: 5173,
+        cors: true,
         origin: 'http://localhost:5173',
         hmr: {
             host: 'localhost',
