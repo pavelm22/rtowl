@@ -14,7 +14,7 @@
           Gemeinsam schreiben wir Erfolgsgeschichte im Formula Student Racing.
         </p>
         <a href="/contact"
-           class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-300">
+           class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
           SPONSOR WERDEN
           <ArrowIcon/>
         </a>

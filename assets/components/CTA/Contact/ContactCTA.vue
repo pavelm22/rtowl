@@ -26,7 +26,7 @@ const props = defineProps({
       <div class="mx-auto max-w-screen-sm text-center">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight">{{ headline }}</h2>
         <p class="mb-6 font-light md:text-lg">{{ text }}</p>
-        <a :href="buttonLink" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-600 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">{{ buttonText}}</a>
+        <a :href="buttonLink" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">{{ buttonText}}</a>
       </div>
     </div>
   </section>
