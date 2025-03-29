@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "flowbite/dist/flowbite.min.css";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+:root {
+  --owlrt-black: #000000;
+  --owlrt-white: #ffffff;
+  --owlrt-red: #d10c19;
+  --owlrt-gray: #353434;
+  --owlrt-dusty-pink: #ded0d1;
+}
 
 html {
   overflow: hidden;

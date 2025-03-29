@@ -1,21 +1,24 @@
 <template>
-  <div class="relative w-full h-screen z-[-1]">
+  <div class="absolute w-full h-screen">
     <canvas ref="sceneCanvas" class="w-full h-screen"></canvas>
   </div>
 </template>
 
 <script setup>
-import {ref, onMounted, onBeforeUnmount} from 'vue'
+import {ref, onMounted, onBeforeUnmount, watch} from 'vue'
 import * as THREE from 'three'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader'
 import gsap from 'gsap'
+import { useRoute } from 'vue-router'
 
 const sceneCanvas = ref(null)
 let scene, camera, renderer, orbitControls, animationFrameId
 let model
 let resizeTimeout
+let orbitAnimation
+let isAnimating = true
 
 const emit = defineEmits(['update:progress'])
 const props = defineProps({
@@ -25,6 +28,7 @@ const props = defineProps({
   },
 })
 const isLoading = ref(true)
+const route = useRoute()
 
 // Kamerapositionen definieren
 const cameraPositions = [
@@ -100,12 +104,9 @@ const adjustCameraForScreenSize = () => {
 
 // Definiere handleResize außerhalb von onMounted
 const handleResize = () => {
-  if (!sceneCanvas) return
+  if (!sceneCanvas || !renderer) return
   adjustCameraForScreenSize()
 }
-
-let orbitAnimation
-let isAnimating = true
 
 function createSmoothOrbitAnimation() {
   const baseRadius = 4
@@ -136,6 +137,8 @@ function createSmoothOrbitAnimation() {
 }
 
 const toggleOrbitMode = () => {
+  if (!orbitControls || !orbitAnimation) return
+
   if (isAnimating) {
     orbitAnimation.pause()
     orbitControls.enabled = true
@@ -146,12 +149,91 @@ const toggleOrbitMode = () => {
   isAnimating = !isAnimating
 }
 
+// Watch for route changes
+watch(() => route.path, (newPath, oldPath) => {
+  if (newPath !== oldPath) {
+    // Adjust ThreeScene based on route if needed
+    console.log(`Route changed from ${oldPath} to ${newPath}`)
+  }
+})
+
+const cleanupScene = () => {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId)
+    animationFrameId = null
+  }
+
+  if (orbitAnimation) {
+    orbitAnimation.kill()
+    orbitAnimation = null
+  }
+
+  if (resizeTimeout) {
+    clearTimeout(resizeTimeout)
+    resizeTimeout = null
+  }
+
+  // Remove event listeners
+  window.removeEventListener('resize', handleResize)
+
+  // Properly dispose of Three.js objects
+  if (renderer) {
+    renderer.dispose()
+    renderer.forceContextLoss()
+    renderer.domElement = null
+    renderer = null
+  }
+
+  if (orbitControls) {
+    orbitControls.dispose()
+    orbitControls = null
+  }
+
+  // THREE.Scene doesn't have a dispose method, but we can clear it
+  if (scene) {
+    scene.traverse((object) => {
+      if (object.geometry) {
+        object.geometry.dispose()
+      }
+
+      if (object.material) {
+        if (Array.isArray(object.material)) {
+          object.material.forEach(material => {
+            if (material.map) material.map.dispose()
+            material.dispose()
+          })
+        } else {
+          if (object.material.map) object.material.map.dispose()
+          object.material.dispose()
+        }
+      }
+    })
+
+    // Clear all objects from the scene
+    while (scene.children.length > 0) {
+      scene.remove(scene.children[0])
+    }
+
+    scene = null
+  }
+
+  // Clear reference to model
+  model = null
+
+  // Clear the canvas
+  if (sceneCanvas.value) {
+    const context = sceneCanvas.value.getContext('webgl2') ||
+        sceneCanvas.value.getContext('webgl') ||
+        sceneCanvas.value.getContext('experimental-webgl')
+    if (context) {
+      context.getExtension('WEBGL_lose_context')?.loseContext()
+    }
+  }
+}
+
 defineExpose({toggleOrbitMode})
 
 onMounted(() => {
-
-  let textureLoadProgress = 0
-  let modelLoadProgress = 0
   renderer = new THREE.WebGLRenderer({
     antialias: true,
     canvas: sceneCanvas.value
@@ -209,7 +291,6 @@ onMounted(() => {
   modelLoader.setDRACOLoader(dracoLoader);
 
   let texture = null;
-  let model = null;
 
   function checkAndAddModel() {
     if (model) {  // Prüft nur, ob das Modell geladen wurde
@@ -219,6 +300,7 @@ onMounted(() => {
           if (texture) {  // Falls Textur vorhanden ist, setze sie
             object.material.map = texture;
             object.material.needsUpdate = true;
+            console.log('Texture geladen')
           }
         }
       });
@@ -270,16 +352,19 @@ onMounted(() => {
     );
   }
 
-  //loadTexture('_static/models/bmw_m4_csl_2023/textures/M4xNME_Badge_baseColor.png');
+  loadTexture('_static/models/bmw_m4_csl_2023/textures/M4xNME_Badge_baseColor.png');
   loadModel('_static/models/owl-models/test.gltf');
+
   // Aufruf nach dem Laden des Modells
   createSmoothOrbitAnimation()
 
   // Animation Loop
   function animate() {
+    if (!renderer || !scene || !camera) return
+
     animationFrameId = requestAnimationFrame(animate)
     renderer.render(scene, camera)
-    if (orbitControls.enabled) {
+    if (orbitControls && orbitControls.enabled) {
       orbitControls.update()
     }
   }
@@ -287,15 +372,6 @@ onMounted(() => {
   animate()
 
   // Verbesserter Resize Handler
-  const handleResize = () => {
-    if (!sceneCanvas.value) return
-
-    adjustCameraForScreenSize()
-
-    // Force a single render after resize
-    renderer.render(scene, camera)
-  }
-
   window.addEventListener('resize', () => {
     if (resizeTimeout) {
       clearTimeout(resizeTimeout)
@@ -309,36 +385,6 @@ onMounted(() => {
 
 // Cleanup
 onBeforeUnmount(() => {
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId)
-  }
-  if (orbitAnimation) {
-    orbitAnimation.kill()
-  }
-  if (resizeTimeout) {
-    clearTimeout(resizeTimeout)
-  }
-
-  window.removeEventListener('resize', handleResize)
-  window.removeEventListener('keydown', toggleOrbitMode)
-
-  if (scene) {
-    scene.traverse((object) => {
-      if (object.geometry) {
-        object.geometry.dispose()
-      }
-      if (object.material) {
-        if (Array.isArray(object.material)) {
-          object.material.forEach(material => material.dispose())
-        } else {
-          object.material.dispose()
-        }
-      }
-    })
-    scene.dispose()
-  }
-
-  renderer?.dispose()
-  orbitControls?.dispose()
+  cleanupScene()
 })
 </script>

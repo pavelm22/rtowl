@@ -1,33 +1,38 @@
 <script setup>
-const props = defineProps({
-  handleMenuClick: {
-    type: Function,
-    required: true
-  }
-})
+import { useRouter, useRoute } from "vue-router";
+const router = useRouter()
 
+const route = useRoute()
+
+function navigateToLegalNotice() {
+  router.push({ name: 'legal_notice' })
+}
+
+function navigateToDataPolicy() {
+  router.push({ name: 'data-policy' })
+}
+
+function navigateToContact() {
+  router.push({ name: 'contact' })
+}
 </script>
 
 <template>
   <div class="bg-black text-white">
     <div class="container mx-auto px-6 py-8">
-      <!-- Grid Container -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-        <!-- Legal Links - First on md+ screens, Second on mobile -->
         <div class="order-2 md:order-1">
           <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
           <ul class="space-y-2">
             <li>
-              <a @click="handleMenuClick('impressum')" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
+              <a @click="navigateToLegalNotice()" class="hover:text-white transition-colors cursor-pointer">Impressum</a>
             </li>
             <li>
-              <a @click="handleMenuClick('data_policy')" class="hover:text-white transition-colors cursor-pointer">Datenschutz</a>
+              <a @click="navigateToDataPolicy()" class="hover:text-white transition-colors cursor-pointer">Datenschutz</a>
             </li>
           </ul>
         </div>
 
-        <!-- Social Media - First on mobile, Second on md+ screens -->
         <div class="order-1 md:order-2">
           <h3 class="text-white font-semibold mb-4">Social Media</h3>
           <div class="flex justify-center space-x-6">
@@ -44,12 +49,11 @@ const props = defineProps({
           </div>
         </div>
 
-        <!-- Contact Info - Third on both mobile and md+ screens -->
         <div class="order-3">
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <div class="space-y-2">
             <div>
-              <a @click="handleMenuClick('contact')" class="hover:text-white transition-colors cursor-pointer">Kontakt Formular</a>
+              <a @click="navigateToContact()" class="hover:text-white transition-colors cursor-pointer">Kontakt Formular</a>
             </div>
             <div>
               <a href="mailto:info@example.com" class="hover:text-white transition-colors">
@@ -65,7 +69,6 @@ const props = defineProps({
         </div>
       </div>
 
-      <!-- Copyright -->
       <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
         <p>© 2024 Technische Hochschule Ostwestfalen-Lippe, OWL Racing-Team. Alle Rechte vorbehalten.</p>
       </div>
