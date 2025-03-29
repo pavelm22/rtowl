@@ -1,7 +1,5 @@
 FROM php:fpm-alpine
 
-LABEL maintainer="sergey@volkar.ru"
-
 # Copy php config
 COPY ./conf/php.ini /usr/local/etc/php/php.ini
 
