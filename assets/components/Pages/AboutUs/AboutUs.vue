@@ -8,7 +8,7 @@
         <span class="inline-block py-1 px-3 mb-4 bg-red-700 text-black font-bold text-xs uppercase tracking-widest">Formula Student Racing Club</span>
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">ENGINEERING<br>THE FUTURE<br>OF RACING</h1>
         <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">A team of passionate engineering students dedicated to designing, building, and racing formula-style vehicles in international competitions.</p>
-        <a href="#team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-700 hover:bg-red-600 rounded-lg transition-colors duration-300">
+        <a href="#team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
           UNSER TEAM <ArrowIcon />
         </a>
       </div>
@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class="text-center mt-12">
-          <a href="/team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold text-black bg-red-700 hover:bg-red-600 rounded-lg transition-colors duration-300">
+          <a href="/team" class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
             MEET THE FULL TEAM
           </a>
         </div>
