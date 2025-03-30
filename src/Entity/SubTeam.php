@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Interface\SubTeamInterface;
 use App\Repository\SubTeamRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -9,7 +10,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SubTeamRepository::class)]
-class SubTeam
+class SubTeam implements SubTeamInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -28,6 +29,10 @@ class SubTeam
     #[ORM\OneToMany(targetEntity: TeamMember::class, mappedBy: 'SubTeam')]
     private Collection $teamMembers;
 
+    #[ORM\ManyToOne(inversedBy: 'SubTeams')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Team $team = null;
+
     public function __construct()
     {
         $this->teamMembers = new ArrayCollection();
@@ -43,7 +48,7 @@ class SubTeam
         return $this->Name;
     }
 
-    public function setName(string $Name): static
+    public function setName(string $Name): SubTeamInterface
     {
         $this->Name = $Name;
 
@@ -55,7 +60,7 @@ class SubTeam
         return $this->Description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $Description): SubTeamInterface
     {
         $this->Description = $Description;
 
@@ -70,7 +75,7 @@ class SubTeam
         return $this->teamMembers;
     }
 
-    public function addTeamMember(TeamMember $teamMember): static
+    public function addTeamMember(TeamMember $teamMember): SubTeamInterface
     {
         if (!$this->teamMembers->contains($teamMember)) {
             $this->teamMembers->add($teamMember);
@@ -80,7 +85,7 @@ class SubTeam
         return $this;
     }
 
-    public function removeTeamMember(TeamMember $teamMember): static
+    public function removeTeamMember(TeamMember $teamMember): SubTeamInterface
     {
         if ($this->teamMembers->removeElement($teamMember)) {
             // set the owning side to null (unless already changed)
@@ -88,6 +93,18 @@ class SubTeam
                 $teamMember->setSubTeam(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTeam(): ?Team
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?Team $team): SubTeamInterface
+    {
+        $this->team = $team;
 
         return $this;
     }
