@@ -1,10 +1,17 @@
 import Dashboard from "@/components/Dashboard/Dashboard.vue";
 
 export default {
-    name: "Dashboard",
+    title: "Components/Dashboard",
     component: Dashboard,
 };
 
-export const Default = {
-    args: {},
-};
+const Template = (args) => ({
+    components: { Dashboard },
+    setup() {
+        return { args };
+    },
+    template: "<Dashboard v-bind='args' />",
+});
+
+export const Default = Template.bind({});
+Default.args = {};
