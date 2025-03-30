@@ -21,7 +21,8 @@ class ApiController extends AbstractController
     #[Route('/api/teams', name: 'get_teams', methods: ['GET'])]
     public function getTeams(): JsonResponse
     {
-        return $this->apiService->getAllTeams();
+        $teams = $this->apiService->getAllTeams();
+        return $teams;
     }
 
     #[Route('/api/teams/{id}', name: 'get_team', methods: ['GET'])]

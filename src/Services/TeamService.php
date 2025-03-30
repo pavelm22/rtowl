@@ -82,4 +82,39 @@ class TeamService extends AbstractCrudService
 
         return $result;
     }
+
+    public function getTeamDetailsTable(int $id): ?array
+    {
+        $team = $this->getById($id);
+
+        if (!$team) {
+            return null;
+        }
+
+        $subTeams = $this->subTeamRepository->findBy(['team' => $team]);
+        $result = [];
+        $result['columns'] = [
+            ['key' => 'id', 'label' => 'ID'],
+            ['key' => 'name', 'label' => 'Name'],
+            ['key' => 'position', 'label' => 'Position'],
+            ['key' => 'imagePath', 'label' => 'Image Path'],
+            ['key' => 'subTeam', 'label' => 'Sub-Team'],
+        ];
+
+        foreach ($subTeams as $subTeam) {
+            foreach ($subTeam->getTeamMembers() as $member) {
+                $subTeamData['data'][] = [
+                    'id' => $member->getId(),
+                    'name' => $member->getName(),
+                    'position' => $member->getPosition() ?? 'Teamcrew',
+                    'imagePath' => $member->getImgPath(),
+                    'subTeam' => $subTeam->getName(),
+                ];
+            }
+
+            $result[] = $subTeamData;
+        }
+
+        return $result;
+    }
 }

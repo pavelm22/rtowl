@@ -7,6 +7,8 @@ use App\Repository\TeamRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 #[ORM\Entity(repositoryClass: TeamRepository::class)]
 class Team implements TeamInterface
@@ -14,27 +16,36 @@ class Team implements TeamInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     private ?string $Year = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     private ?string $Name = null;
 
     #[ORM\OneToOne(mappedBy: 'Team', cascade: ['persist', 'remove'])]
+    #[Groups(['team:read'])]
+    #[MaxDepth(1)]
     private ?Vehicle $vehicle = null;
 
     /**
      * @var Collection<int, SubTeam>
      */
     #[ORM\OneToMany(targetEntity: SubTeam::class, mappedBy: 'team')]
+    #[Groups(['team:read'])]
+    #[MaxDepth(1)]
     private Collection $SubTeams;
 
     /**
      * @var Collection<int, Sponsors>
      */
     #[ORM\ManyToMany(targetEntity: Sponsors::class, mappedBy: 'SupportedTeams')]
+    #[Groups(['team:read'])]
+    #[MaxDepth(1)]
     private Collection $sponsors;
 
     public function __construct()
@@ -43,11 +54,13 @@ class Team implements TeamInterface
         $this->sponsors = new ArrayCollection();
     }
 
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     public function getYear(): ?string
     {
         return $this->Year;
@@ -60,6 +73,7 @@ class Team implements TeamInterface
         return $this;
     }
 
+    #[Groups(['team:read', 'team:list', 'vehicle:read'])]
     public function getName(): ?string
     {
         return $this->Name;
@@ -72,6 +86,7 @@ class Team implements TeamInterface
         return $this;
     }
 
+    #[Groups(['team:read'])]
     public function getVehicle(): ?Vehicle
     {
         return $this->vehicle;
@@ -97,6 +112,7 @@ class Team implements TeamInterface
     /**
      * @return Collection<int, SubTeam>
      */
+    #[Groups(['team:read'])]
     public function getSubTeams(): Collection
     {
         return $this->SubTeams;
@@ -127,6 +143,7 @@ class Team implements TeamInterface
     /**
      * @return Collection<int, Sponsors>
      */
+    #[Groups(['team:read'])]
     public function getSponsors(): Collection
     {
         return $this->sponsors;
