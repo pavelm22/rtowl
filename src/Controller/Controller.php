@@ -11,6 +11,6 @@ final class Controller extends AbstractController
     #[Route('/{spaRouting}', name: 'app_', requirements: ['spaRouting' => '.*'], methods: ['GET'], priority: -1)]
     public function index(): Response
     {
-        return $this->render('/base.html.twig',);
+        return $this->render('base.html.twig');
     }
 }
