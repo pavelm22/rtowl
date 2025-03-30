@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use App\Entity\Interface\VehicleInterface;
 use App\Repository\VehicleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: VehicleRepository::class)]
-class Vehicle
+class Vehicle implements VehicleInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -25,6 +28,17 @@ class Vehicle
     #[ORM\OneToOne(inversedBy: 'vehicle', cascade: ['persist', 'remove'])]
     private ?Team $Team = null;
 
+    /**
+     * @var Collection<int, Sponsors>
+     */
+    #[ORM\ManyToMany(targetEntity: Sponsors::class, mappedBy: 'SponsoredVehicles')]
+    private Collection $sponsors;
+
+    public function __construct()
+    {
+        $this->sponsors = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,7 +49,7 @@ class Vehicle
         return $this->Name;
     }
 
-    public function setName(string $Name): static
+    public function setName(string $Name): VehicleInterface
     {
         $this->Name = $Name;
 
@@ -47,7 +61,7 @@ class Vehicle
         return $this->Description;
     }
 
-    public function setDescription(string $Description): static
+    public function setDescription(string $Description): VehicleInterface
     {
         $this->Description = $Description;
 
@@ -59,7 +73,7 @@ class Vehicle
         return $this->Specs;
     }
 
-    public function setSpecs(array $Specs): static
+    public function setSpecs(array $Specs): VehicleInterface
     {
         $this->Specs = $Specs;
 
@@ -71,9 +85,46 @@ class Vehicle
         return $this->Team;
     }
 
-    public function setTeam(?Team $Team): static
+    public function setTeam(?Team $Team): VehicleInterface
     {
+        // Unset the owning side of the relation if necessary
+        if ($Team === null && $this->Team !== null) {
+            $this->Team->setVehicle(null);
+        }
+
+        // Set the owning side of the relation if necessary
+        if ($Team !== null && $Team->getVehicle() !== $this) {
+            $Team->setVehicle($this);
+        }
+
         $this->Team = $Team;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Sponsors>
+     */
+    public function getSponsors(): Collection
+    {
+        return $this->sponsors;
+    }
+
+    public function addSponsor(Sponsors $sponsor): VehicleInterface
+    {
+        if (!$this->sponsors->contains($sponsor)) {
+            $this->sponsors->add($sponsor);
+            $sponsor->addSponsoredVehicle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSponsor(Sponsors $sponsor): VehicleInterface
+    {
+        if ($this->sponsors->removeElement($sponsor)) {
+            $sponsor->removeSponsoredVehicle($this);
+        }
 
         return $this;
     }

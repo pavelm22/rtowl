@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
+use App\Entity\Interface\TeamMemberInterface;
 use App\Repository\TeamMemberRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TeamMemberRepository::class)]
-class TeamMember
+class TeamMember implements TeamMemberInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -25,6 +26,12 @@ class TeamMember
     #[ORM\Column(length: 255)]
     private ?string $Position = null;
 
+    #[ORM\ManyToOne(inversedBy: 'teamMembers')]
+    private ?SubTeam $SubTeam = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $ImgPath = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,7 +42,7 @@ class TeamMember
         return $this->Vorname;
     }
 
-    public function setVorname(string $Vorname): static
+    public function setVorname(string $Vorname): TeamMemberInterface
     {
         $this->Vorname = $Vorname;
 
@@ -47,7 +54,7 @@ class TeamMember
         return $this->Name;
     }
 
-    public function setName(string $Name): static
+    public function setName(string $Name): TeamMemberInterface
     {
         $this->Name = $Name;
 
@@ -59,7 +66,7 @@ class TeamMember
         return $this->Email;
     }
 
-    public function setEmail(string $Email): static
+    public function setEmail(string $Email): TeamMemberInterface
     {
         $this->Email = $Email;
 
@@ -71,9 +78,33 @@ class TeamMember
         return $this->Position;
     }
 
-    public function setPosition(string $Position): static
+    public function setPosition(string $Position): TeamMemberInterface
     {
         $this->Position = $Position;
+
+        return $this;
+    }
+
+    public function getSubTeam(): ?SubTeam
+    {
+        return $this->SubTeam;
+    }
+
+    public function setSubTeam(?SubTeam $SubTeam): TeamMemberInterface
+    {
+        $this->SubTeam = $SubTeam;
+
+        return $this;
+    }
+
+    public function getImgPath(): ?string
+    {
+        return $this->ImgPath;
+    }
+
+    public function setImgPath(string $ImgPath): static
+    {
+        $this->ImgPath = $ImgPath;
 
         return $this;
     }
