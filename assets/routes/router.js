@@ -106,12 +106,10 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
     scrollBehavior(to, from, savedPosition) {
-        // Scroll to top on navigation
         return { top: 0 }
     }
 })
 
-// Global before hook to update page title and analytics
 router.beforeEach((to, from, next) => {
     // Update page title
     document.title = to.meta.title || 'OWL Racing'
