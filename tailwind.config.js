@@ -4,7 +4,9 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
     "./node_modules/flowbite/**/*.js",
-      "./templates/**/*.twig"
+      "./templates/**/*.twig",
+    "./.storybook/**/*.{js,ts,jsx,tsx,vue}",
+    "./.assets/**/*.{js,ts,jsx,tsx,vue}"
   ],
   theme: {
     extend: {},
