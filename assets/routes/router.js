@@ -72,22 +72,38 @@ const routes = [
             {
                 path: '',
                 name: 'overview',
-                component: () => import('@/components/Dashboard/Views/Overview.vue')
+                component: () => import('@/components/Dashboard/Views/Overview.vue'),
+                meta: {
+                    showThreeScene: false,
+                    title: 'OWL Racing - Dashboard'
+                }
             },
             {
                 path: 'team',
                 name: 'dash-team',
                 component: () => import('@/components/Dashboard/Views/Team.vue'),
+                meta: {
+                    showThreeScene: false,
+                    title: 'OWL Racing - Dashboard'
+                }
             },
             {
                 path: 'sponsors',
                 name: 'dash-sponsors',
                 component: () => import('@/components/Dashboard/Views/Sponsors.vue'),
+                meta: {
+                    showThreeScene: false,
+                    title: 'OWL Racing - Dashboard'
+                }
             },
             {
                 path: 'team-member',
                 name: 'dash-team-member',
                 component: () => import('@/components/Dashboard/Views/TeamMember.vue'),
+                meta: {
+                    showThreeScene: false,
+                    title: 'OWL Racing - Dashboard'
+                }
             }
         ],
         meta: {

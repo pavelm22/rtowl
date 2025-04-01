@@ -38,8 +38,17 @@ class ApiService
     {
         $teams = $this->teamService->getAll();
         $serializedTeams = [];
+        $serializedTeams['columns'] = [
+            ['key' => 'id', 'label' => 'ID'],
+            ['key' => 'year', 'label' => 'Year'],
+            ['key' => 'name', 'label' => 'Name'],
+            ['key' => 'vehicle', 'label' => 'Vehicle'],
+            ['key' => 'subTeams', 'label' => 'subTeams'],
+            ['key' => 'subTeams', 'label' => 'Sponsors'],
+        ];
+
         foreach ($teams as $team) {
-            $serializedTeams[] = [
+            $serializedTeams['data'][] = [
                 'id' => $team->getId(),
                 'year' => $team->getYear(),
                 'name' => $team->getName(),
