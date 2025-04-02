@@ -6,7 +6,7 @@
 '          Begleiten Sie uns auf unserer Reise von der Konzeption bis zur\n'+
 '          Ziellinie – ein Pfad, gepflastert mit Innovation, Teamgeist und\n'+
 '          Geschwindigkeit.'"
-                 :button-text="'OUR TEAM'"
+                 :button-text="'UNSER TEAM'"
                  :button-link="'#team'"
     />
 

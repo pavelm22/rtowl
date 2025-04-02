@@ -9,7 +9,7 @@ function navigateToLegalNotice() {
 }
 
 function navigateToDataPolicy() {
-  router.push({ name: 'data-policy' })
+  router.push({ name: 'data_policy' })
 }
 
 function navigateToContact() {
