@@ -1,21 +1,13 @@
 <template>
   <PageLayout :show="true">
-    <!-- Hero Section - Similar to About-US -->
-    <section class="relative">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-      </div>
-      <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-700 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">KONTAKT</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
-          Gerne sind wir für Sie telefonisch, per Email oder über unser Kontaktformular erreichbar.
-          Wir freuen uns auf Ihre Nachricht.
-        </p>
-      </div>
-    </section>
+    <HeroSection
+        :badge="'OWL RACING TEAM'"
+        :headline="'KONTAKT'"
+        :description="'Gerne sind wir für Sie telefonisch, per Email oder über unser Kontaktformular erreichbar. Wir freuen uns auf Ihre Nachricht.'"
+        :button-text=null
+        :button-link=null
+    />
 
-    <!-- Contact Information & Form Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
@@ -200,6 +192,7 @@ import EmailIcon from "@/components/Icons/EmailIcon.vue";
 import LocationIcon from "@/components/Icons/LocationIcon.vue";
 import FacebookIcon from "@/components/Icons/FacebookIcon.vue";
 import InstagramIcon from "@/components/Icons/InstagramIcon.vue";
+import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
 const mapContainer = ref(null);
 let map = null;

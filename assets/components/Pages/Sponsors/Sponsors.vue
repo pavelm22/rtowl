@@ -1,25 +1,14 @@
 <template>
   <PageLayout :show="true">
     <!-- Hero Section -->
-    <section class="relative">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-      </div>
-      <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-          SPONSOREN</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
-          Die Partner, die unser Team unterstützen und unsere Erfolge möglich machen.
-          Gemeinsam schreiben wir Erfolgsgeschichte im Formula Student Racing.
-        </p>
-        <a href="/contact"
-           class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
-          SPONSOR WERDEN
-          <ArrowIcon/>
-        </a>
-      </div>
-    </section>
+    <HeroSection
+        :badge="'OWL RACING TEAM'"
+        :headline="'SPONSOREN'"
+        :description="'Die Partner, die unser Team unterstützen und unsere Erfolge möglich machen.\n'+
+'          Gemeinsam schreiben wir Erfolgsgeschichte im Formula Student Racing.'"
+        :button-link="'/contact'"
+        :button-text="'SPONSOR WERDEN'"
+    />
 
     <!-- Sponsors Introduction Section -->
     <section class="py-16 lg:py-24 bg-white">
@@ -162,6 +151,7 @@ import ArrowIcon from "@/components/Icons/ArrowIcon.vue";
 import MouseClickIcon from "@/components/Icons/MouseClickIcon.vue";
 import CommunityIcon from "@/components/Icons/CommunityIcon.vue";
 import LabIcon from "@/components/Icons/LabIcon.vue";
+import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
 const router = useRouter();
 const route = useRoute();

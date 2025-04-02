@@ -1,19 +1,12 @@
 <template>
   <PageLayout :show="true">
-    <!-- Hero Section - Similar to other pages but simpler for legal content -->
-    <section class="relative">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-      </div>
-      <div class="max-w-screen-xl px-4 py-20 mx-auto flex flex-col items-start text-left lg:py-32 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">IMPRESSUM</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
-          Rechtliche Informationen zum OWL Racing-Team an der Technischen Hochschule Ostwestfalen-Lippe e.V.
-        </p>
-      </div>
-    </section>
-
+    <HeroSection
+        :badge="'OWL RACING TEAM'"
+        :headline="'IMPRESSUM'"
+        :description="'Rechtliche Informationen zum OWL Racing-Team an der Technischen Hochschule Ostwestfalen-Lippe e.V.'"
+        :button-link="null"
+        :button-text="null"
+    />
     <!-- Main Content Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
@@ -262,6 +255,7 @@
 import ContactCTA from "../../CTA/Contact/ContactCTA.vue";
 import Footer from "../../Footer/Footer.vue";
 import PageLayout from "@/components/PageLayout/PageLayout.vue";
+import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
 </script>
 

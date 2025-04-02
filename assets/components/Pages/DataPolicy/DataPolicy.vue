@@ -1,19 +1,11 @@
 <template>
   <PageLayout :show="true">
-    <!-- Hero Section -->
-    <section class="relative">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-      </div>
-      <div class="max-w-screen-xl px-4 py-20 mx-auto flex flex-col items-start text-left lg:py-32 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">DATENSCHUTZ- <br>ERKLÄRUNG</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
-          Informationen zum Schutz Ihrer personenbezogenen Daten bei der Nutzung unserer Website.
-        </p>
-      </div>
-    </section>
-
+    <HeroSection :badge="'OWL RACING TEAM'"
+                 :headline="'DATENSCHUTZ- \n ERKLÄRUNG'"
+                 :description="'Informationen zum Schutz Ihrer personenbezogenen Daten bei der Nutzung unserer Website.'"
+                 :button-link="null"
+                 :button-text="null"
+    />
     <!-- Main Content Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
@@ -23,7 +15,8 @@
             <span class="text-sm font-bold text-red-600 uppercase tracking-wider">Transparenz</span>
             <h2 class="mt-2 text-3xl font-bold md:text-4xl">IHRE DATEN IN SICHEREN HÄNDEN</h2>
             <p class="mt-4 text-gray-700 max-w-3xl mx-auto">
-              Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. In dieser Datenschutzerklärung informieren wir Sie umfassend über die Erhebung, Verarbeitung und Nutzung Ihrer Daten.
+              Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. In dieser Datenschutzerklärung informieren wir
+              Sie umfassend über die Erhebung, Verarbeitung und Nutzung Ihrer Daten.
             </p>
           </div>
         </div>
@@ -32,7 +25,8 @@
         <div class="space-y-12 max-w-4xl mx-auto">
           <!-- Section 1 -->
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">1. Datenschutz auf einen Blick</h2>
+            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">1. Datenschutz auf einen
+              Blick</h2>
 
             <div class="space-y-6">
               <div>
@@ -48,7 +42,8 @@
               <div>
                 <h3 class="text-xl font-bold mb-3 text-gray-800">Datenerfassung auf unserer Website</h3>
                 <p class="text-gray-700">
-                  <span class="font-semibold">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</span><br>
+                  <span
+                      class="font-semibold">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</span><br>
                   Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
                   können Sie dem Impressum dieser Website entnehmen.
                 </p>
@@ -79,7 +74,8 @@
                 <p class="text-gray-700">
                   Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer
                   gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die
-                  Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema
+                  Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum
+                  Thema
                   Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des
                   Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
                 </p>
@@ -89,7 +85,8 @@
 
           <!-- Section 2 -->
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">2. Allgemeine Hinweise und Pflichtinformationen</h2>
+            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">2. Allgemeine Hinweise und
+              Pflichtinformationen</h2>
 
             <div class="space-y-6">
               <div>
@@ -103,7 +100,8 @@
                   vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen.
                   Sie erläutert auch, wie und zu welchem Zweck das geschieht.
                   Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per
-                  E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte
+                  E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch
+                  Dritte
                   ist nicht möglich.
                 </p>
               </div>
@@ -133,7 +131,8 @@
 
           <!-- Section 3 -->
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">3. Datenerfassung auf unserer Website</h2>
+            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">3. Datenerfassung auf
+              unserer Website</h2>
 
             <div class="space-y-6">
               <div>
@@ -141,7 +140,8 @@
                 <p class="text-gray-700">
                   Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner
                   keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot
-                  nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner
+                  nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem
+                  Rechner
                   abgelegt werden und die Ihr Browser speichert.
                   Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach
                   Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis
@@ -176,11 +176,13 @@
                 <p class="text-gray-700">
                   Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
                   Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
-                  Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre
+                  Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne
+                  Ihre
                   Einwilligung weiter.
                   Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf
                   Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung
-                  jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis
+                  jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der
+                  bis
                   zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
                 </p>
               </div>
@@ -199,10 +201,12 @@
                   Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins erkennen Sie an dem
                   Facebook-Logo oder dem „Like-Button" („Gefällt mir") auf unserer Seite. Eine Übersicht über die
                   Facebook-Plugins finden Sie hier:
-                  <a href="https://developers.facebook.com/docs/plugins/" target="_blank" class="text-red-600 hover:underline">https://developers.facebook.com/docs/plugins/</a>.
+                  <a href="https://developers.facebook.com/docs/plugins/" target="_blank"
+                     class="text-red-600 hover:underline">https://developers.facebook.com/docs/plugins/</a>.
                   <br><br>
                   Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem
-                  Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit Ihrer
+                  Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit
+                  Ihrer
                   IP-Adresse unsere Seite besucht haben. Wenn Sie den Facebook „Like-Button" anklicken während Sie
                   in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem
                   Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto
@@ -234,7 +238,8 @@
 
           <!-- Section 5 -->
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">5. Analyse Tools und Werbung</h2>
+            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-red-600 inline-block">5. Analyse Tools und
+              Werbung</h2>
 
             <div class="space-y-6">
               <div>
@@ -251,7 +256,8 @@
                 <h3 class="text-xl font-bold mb-3 text-gray-800">IP Anonymisierung</h3>
                 <p class="text-gray-700">
                   Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre
-                  IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten
+                  IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen
+                  Vertragsstaaten
                   des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt.
                 </p>
               </div>
@@ -310,8 +316,9 @@
     </section>
 
     <template #footer>
-      <ContactCTA :headline="'Fragen zum Datenschutz?'" :text="'Haben Sie Fragen zu unserer Datenschutzerklärung oder möchten Sie Ihre Rechte bezüglich Ihrer Daten ausüben? Kontaktieren Sie uns gerne direkt.'"/>
-      <Footer />
+      <ContactCTA :headline="'Fragen zum Datenschutz?'"
+                  :text="'Haben Sie Fragen zu unserer Datenschutzerklärung oder möchten Sie Ihre Rechte bezüglich Ihrer Daten ausüben? Kontaktieren Sie uns gerne direkt.'"/>
+      <Footer/>
     </template>
   </PageLayout>
 </template>
@@ -320,12 +327,13 @@
 import ContactCTA from "../../CTA/Contact/ContactCTA.vue";
 import Footer from "../../Footer/Footer.vue";
 import PageLayout from "@/components/PageLayout/PageLayout.vue";
-import { useRouter } from "vue-router";
+import {useRouter} from "vue-router";
+import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
 const router = useRouter();
 
 function handleMenuClick(page) {
-  router.push({ name: page });
+  router.push({name: page});
 }
 </script>
 
