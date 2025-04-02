@@ -1,10 +1,10 @@
 <template>
   <PageLayout :show="true">
-    <HeroSection badge="'OWL RACING TEAM'"
-                 headline="'DIE ZUKUNFT\nDES RENNSPORTS\nGESTALTEN'"
-                 description="'Ein Team leidenschaftlicher Ingenieurstudierende, das sich dem Design, Bau und Rennen von Formel-Fahrzeugen in internationalen Wettbewerben widmet.'"
-                 button-text="'UNSER TEAM'"
-                 button-link="'#team'"
+    <HeroSection badge="OWL RACING TEAM"
+                 headline="DIE ZUKUNFT <br> DES RENNSPORTS <br> GESTALTEN"
+                 description="Ein Team leidenschaftlicher Ingenieurstudierende, das sich dem Design, Bau und Rennen von Formel-Fahrzeugen in internationalen Wettbewerben widmet."
+                 button-text="UNSER TEAM"
+                 button-link="#team"
     />
     <section class="py-16 lg:py-24 bg-black">
       <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -133,20 +133,21 @@
     </div>
   </div>
 </section>-->
-
+  <hr>
     <!-- Sponsors Section -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our sponsors</span>
-          <h2 class="mt-2 text-3xl font-bold  md:text-4xl">POWERED BY PARTNERS</h2>
-          <p class="mt-4 text-gray-900 max-w-2xl mx-auto">We are grateful for the support of our sponsors who make our
-            racing dreams possible.</p>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wider">{{ translations?.sponsors?.tagline?.de }}</span>
+          <h2 class="mt-2 text-3xl font-bold  md:text-4xl">{{ translations?.sponsors?.title?.de }}</h2>
+          <p class="mt-4 text-gray-900 max-w-2xl mx-auto">
+            {{ translations?.sponsors?.description?.de }}
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="sponsor in firstThreeSponsors"
-               class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
+               class="bg-white rounded-lg shadow-md p-6 flex items-center justify-center h-48 relative group transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
             <img :src="sponsor.imagePath" alt="Sponsor logo" class="max-h-16">
           </div>
         </div>
@@ -154,7 +155,7 @@
         <div class="mt-12 text-center">
           <a href="/contact"
              class="inline-flex items-center justify-center px-5 py-3 text-base font-bold bg-black text-white border-2 border-red-700 hover:bg-red-600 hover:text-black rounded-lg transition-colors duration-300">
-            BECOME A SPONSOR
+            {{ translations?.sponsors?.button?.de }}
           </a>
         </div>
       </div>
