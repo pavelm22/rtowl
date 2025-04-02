@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute z-50">
+  <div class="absolute z-20">
     <div class="fixed top-0 w-full transition-all duration-700"
             :class="{ 'h-screen': !isSmall, 'h-20': isSmall }"
             style="background-color: #000000;"

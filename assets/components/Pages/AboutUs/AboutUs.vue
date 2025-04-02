@@ -1,10 +1,10 @@
 <template>
   <PageLayout :show="true">
-    <HeroSection :badge="'OWL RACING TEAM'"
-                 :headline="'ENGINEERING\nTHE FUTURE\nOF RACING'"
-                 :description="'A team of passionate engineering students dedicated to designing, building, and racing formula-style vehicles in international competitions.'"
-                 :button-text="'OUR TEAM'"
-                 :button-link="'#team'"
+    <HeroSection badge="'OWL RACING TEAM'"
+                 headline="'DIE ZUKUNFT\nDES RENNSPORTS\nGESTALTEN'"
+                 description="'Ein Team leidenschaftlicher Ingenieurstudierende, das sich dem Design, Bau und Rennen von Formel-Fahrzeugen in internationalen Wettbewerben widmet.'"
+                 button-text="'UNSER TEAM'"
+                 button-link="'#team'"
     />
     <section class="py-16 lg:py-24 bg-black">
       <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -135,12 +135,12 @@
 </section>-->
 
     <!-- Sponsors Section -->
-    <section class="py-16 lg:py-24 bg-black text-white">
+    <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="text-center mb-16">
           <span class="text-sm font-bold text-red-700 uppercase tracking-wider">Our sponsors</span>
           <h2 class="mt-2 text-3xl font-bold  md:text-4xl">POWERED BY PARTNERS</h2>
-          <p class="mt-4 max-w-2xl mx-auto">We are grateful for the support of our sponsors who make our
+          <p class="mt-4 text-gray-900 max-w-2xl mx-auto">We are grateful for the support of our sponsors who make our
             racing dreams possible.</p>
         </div>
 
