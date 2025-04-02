@@ -1,152 +1,338 @@
 [
   {
-    "name": "TH OWL",
-    "website": "https://www.th-owl.de",
-    "imagePath": "/_static/img/sponsors/thowl.png"
-  },
-  {
-    "name": "Phoenix Contact",
-    "website": "https://www.phoenixcontact.com/de-de/",
-    "imagePath": "/_static/img/sponsors/phoenixcontact.png"
+    "name": "K&K",
+    "rank": 1,
+    "level": "Platin",
+    "website": "https://kuk-proto.de",
+    "imagePath": "https://static.wixstatic.com/media/ba7cbf_1eaab75834d545f9b9a7b1b3f51c51f8~mv2.png/v1/fill/w_212,h_57,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/K%26K%20Wei%C3%9F%20Petrol.png"
   },
   {
     "name": "KEB",
+    "rank": 1,
+    "level": "Platin",
     "website": "https://www.keb-automation.com/de/",
-    "imagePath": "/_static/img/sponsors/keb.png"
+    "imagePath": "/build/img/sponsors/keb.png"
   },
   {
-    "name": "Metzger und Sohn",
-    "website": "https://www.metzger-und-sohn.de",
-    "imagePath": "/_static/img/sponsors/metzgerundsohn.png"
+    "name": "Phoenix Contact",
+    "rank": 1,
+    "level": "Platin",
+    "website": "https://www.phoenixcontact.com/de-de/",
+    "imagePath": "/build/img/sponsors/phoenixcontact.png"
   },
   {
     "name": "Sollich",
+    "rank": 1,
+    "level": "Platin",
     "website": "https://www.sollich.com",
-    "imagePath": "/_static/img/sponsors/sollich.png"
+    "imagePath": "/build/img/sponsors/sollich.png"
   },
   {
-    "name": "Siemens",
-    "website": "www.siemens.com/de/de.html",
-    "imagePath": "/_static/img/sponsors/siemens.png"
-  },
-  {
-    "name": "MultiSENSE",
-    "website": "https://multisenses.de",
-    "imagePath": "/_static/img/sponsors/multisenses.png"
+    "name": "TH OWL",
+    "rank": 1,
+    "level": "Platin",
+    "website": "https://www.th-owl.de",
+    "imagePath": "/build/img/sponsors/thowl.png"
   },
   {
     "name": "HG OWL",
+    "rank": 2,
+    "level": "Gold",
     "website": "https://www.hg-owl-ev.de/start",
-    "imagePath": "/_static/img/sponsors/hglippe.png"
+    "imagePath": "/build/img/sponsors/hglippe.png"
   },
   {
-    "name": "Hanning und Kahl",
-    "website": "https://www.hanning-kahl.de/index.html",
-    "imagePath": "/_static/img/sponsors/hanningundkahl.png"
+    "name": "Metzger und Sohn",
+    "rank": 2,
+    "level": "Gold",
+    "website": "https://www.metzger-und-sohn.de",
+    "imagePath": "/build/img/sponsors/metzgerundsohn.png"
   },
   {
-    "name": "SMC",
-    "website": "https://www.smc.eu/de-de",
-    "imagePath": "/_static/img/sponsors/smc.png"
+    "name": "MultiSENSES",
+    "rank": 2,
+    "level": "Gold",
+    "website": "https://multisenses.de",
+    "imagePath": "/build/img/sponsors/multisenses.png"
   },
   {
-    "name": "E+S Industriebedarf",
-    "website": "https://shop.es-industriebedarf.de",
-    "imagePath": "/_static/img/sponsors/eunds.png"
+    "name": "Siemens",
+    "rank": 2,
+    "level": "Gold",
+    "website": "www.siemens.com/de/de.html",
+    "imagePath": "/build/img/sponsors/siemens.png"
   },
   {
     "name": "3Dconnexion",
+    "rank": 3,
+    "level": "Silber",
     "website": "https://3dconnexion.com/de/",
-    "imagePath": "/_static/img/sponsors/3dconnexion.png"
+    "imagePath": "/build/img/sponsors/3dconnexion.png"
+  },
+  {
+    "name": "BMZ",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.bmz-group.com",
+    "imagePath": "https://www.bmz-group.com/images/Logos/BMZ_INNOVATION-GROUP-Logo_RGB_MAIL.png"
   },
   {
     "name": "Detmold Digital",
+    "rank": 3,
+    "level": "Silber",
     "website": "https://3d-detmold.com",
-    "imagePath": "/_static/img/sponsors/detmolddigital.png"
+    "imagePath": "/build/img/sponsors/detmolddigital.png"
   },
   {
-    "name": "Beta Layout",
-    "website": "https://de.beta-layout.com/leiterplatten/",
-    "imagePath": "/_static/img/sponsors/beta.png"
+    "name": "E+S Industriebedarf",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://shop.es-industriebedarf.de",
+    "imagePath": "/build/img/sponsors/eunds.png"
   },
   {
-    "name": "Warweg Eloxal",
-    "website": "https://www.warweg-eloxal.de",
-    "imagePath": "/_static/img/sponsors/warweg_eloxal.png"
+    "name": "FormTech",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://formtech-lemgo.de",
+    "imagePath": "http://formtech-lemgo.de/wp-content/uploads/2024/10/Formtech.png"
   },
   {
-    "name": "Stadtwerke Detmold",
-    "website": "https://www.stadtwerke-detmold.de/",
-    "imagePath": "/_static/img/sponsors/dt_stadtwerke.png"
+    "name": "Hanning und Kahl",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.hanning-kahl.de/index.html",
+    "imagePath": "/build/img/sponsors/hanningundkahl.png"
+  },
+  {
+    "name": "Richter Werkzeugbau",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.richter-werkzeugbau.de/de/",
+    "imagePath": "https://www.richter-werkzeugbau.de/templates/steel_black/img/logo.jpg"
+  },
+  {
+    "name": "Rollax",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.rollax.com",
+    "imagePath": "https://www.rollax.com/fileadmin/masterTemplate/Resources/Public/Images/site-roll/logos/logo.png"
+  },
+  {
+    "name": "SMC",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.smc.eu/de-de",
+    "imagePath": "/build/img/sponsors/smc.png"
   },
   {
     "name": "Vector",
+    "rank": 3,
+    "level": "Silber",
     "website": "https://www.vector.com/de/de/",
-    "imagePath": "/_static/img/sponsors/vector.png"
+    "imagePath": "/build/img/sponsors/vector.png"
   },
   {
-    "name": "zdi",
-    "website": "https://www.lippe-mint.de/",
-    "imagePath": "/_static/img/sponsors/zdi.png"
-  },
-  {
-    "name": "VDI OWL",
-    "website": "https://www.vdi.de/ueber-uns/vor-ort/bezirksvereine/ostwestfalen-lippe-bezirksverein-ev",
-    "imagePath": "/_static/img/sponsors/owl_lipp_bez.png"
-  },
-  {
-    "name": "Hoffmann Group",
-    "website": "https://www.hoffmann-group.com/DE/de/hom/",
-    "imagePath": "/_static/img/sponsors/hoffman_group.png"
-  },
-  {
-    "name": "AKG Group",
-    "website": "https://www.akg-group.com/de/akg-gruppe/",
-    "imagePath": "/_static/img/sponsors/akg.png"
-  },
-  {
-    "name": "Rosenberger",
-    "website": "https://www.rosenberger.com/de/",
-    "imagePath": "/_static/img/sponsors/rosenberger.png"
-  },
-  {
-    "name": "Anderson Group",
-    "website": "https://www.andersoneurope.com/anderson-gruppe.html",
-    "imagePath": "/_static/img/sponsors/anderson_group.png"
-  },
-  {
-    "name": "Bender",
-    "website": "https://www.bender.de/",
-    "imagePath": "/_static/img/sponsors/bender.png"
+    "name": "Warweg Eloxal",
+    "rank": 3,
+    "level": "Silber",
+    "website": "https://www.warweg-eloxal.de",
+    "imagePath": "/build/img/sponsors/warweg_eloxal.png"
   },
   {
     "name": "WR",
+    "rank": 3,
+    "level": "Silber",
     "website": "https://www.wrausch.de/home/",
-    "imagePath": "/_static/img/sponsors/wr.png"
+    "imagePath": "/build/img/sponsors/wr.png"
   },
   {
-    "name": "Smart Mechatronics",
-    "website": "https://www.smartmechatronics.de/",
-    "imagePath": "/_static/img/sponsors/smart_mechatronics.png"
-  },
-  {
-    "name": "norelem",
-    "website": "https://norelem.de/de/",
-    "imagePath": "/_static/img/sponsors/norelem.png"
-  },
-  {
-    "name": "Kannegiesser",
-    "website": "https://www.kannegiesser.com/de/de/index.html",
-    "imagePath": "/_static/img/sponsors/kannegiesser.png"
-  },
-  {
-    "name": "Fleischer Elektrotechnik",
-    "website": "https://www.fleischer-elektrotechnik.de/index.htm",
-    "imagePath": "/_static/img/sponsors/fleischer.png"
+    "name": "Böllhoff",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.boellhoff.com/de-de/",
+    "imagePath": null
   },
   {
     "name": "H&R",
+    "rank": 4,
+    "level": "Bronze",
     "website": "https://www.h-r.com/",
-    "imagePath": "/_static/img/sponsors/hundr.png"
+    "imagePath": "/build/img/sponsors/hundr.png"
+  },
+  {
+    "name": "Metawell",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.metawell.com",
+    "imagePath": "https://www.metawell.com/wp-content/uploads/2022/02/metawell-logo.png"
+  },
+  {
+    "name": "norelem",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://norelem.de/de/",
+    "imagePath": "/build/img/sponsors/norelem.png"
+  },
+  {
+    "name": "Techniker Krankenkasse",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.tk.de/techniker",
+    "imagePath": "https://www.tk.de/blueprint/static/assets/base/images/logo_Sonderform.svg?cb=66fd5ac7d0edc8cd81d6d99a0a54282b"
+  },
+  {
+    "name": "VDI OWL",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.vdi.de/ueber-uns/vor-ort/bezirksvereine/ostwestfalen-lippe-bezirksverein-ev",
+    "imagePath": "/build/img/sponsors/owl_lipp_bez.png"
+  },
+  {
+    "name": "Wirtschaftsjunioren Lippe",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.ihk.de/lippe-detmold/hauptnavigation/netzwerken-ihklippe/wirtschaftsjunioren-lippe-e-v--4267366",
+    "imagePath": null
+  },
+  {
+    "name": "zdi",
+    "rank": 4,
+    "level": "Bronze",
+    "website": "https://www.lippe-mint.de/",
+    "imagePath": "/build/img/sponsors/zdi.png"
+  },
+  {
+    "name": "ACE",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.ace-ace.de",
+    "imagePath": "https://www.ace-ace.de/static/version1743439479/frontend/Ace/default/de_DE/images/logo.svg"
+  },
+  {
+    "name": "AKG Group",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.akg-group.com/de/akg-gruppe/",
+    "imagePath": "/build/img/sponsors/akg.png"
+  },
+  {
+    "name": "Anderson Group",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.andersoneurope.com/anderson-gruppe.html",
+    "imagePath": "/build/img/sponsors/anderson_group.png"
+  },
+  {
+    "name": "Autodesk",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.autodesk.de",
+    "imagePath":
+  },
+  {
+    "name": "Bender",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.bender.de/",
+    "imagePath": "/build/img/sponsors/bender.png"
+  },
+  {
+    "name": "Brauerei Strate",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://brauerei-strate.de",
+    "imagePath": null
+  },
+  {
+    "name": "Calspan",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://calspan.com",
+    "imagePath": null
+  },
+  {
+    "name": "Coroplast",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.coroplast-group.com/de/",
+    "imagePath": null
+  },
+  {
+    "name": "Ganter Norm",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.ganternorm.com/de/home",
+    "imagePath": null
+  },
+  {
+    "name": "Hoffmann Group",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.hoffmann-group.com/DE/de/hom/",
+    "imagePath": "/build/img/sponsors/hoffman_group.png"
+  },
+  {
+    "name": "igus",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.igus.de",
+    "imagePath": null
+  },
+  {
+    "name": "IPG",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.ipg-automotive.com/de/",
+    "imagePath": null
+  },
+  {
+    "name": "Isabellenhütte",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.isabellenhuette.de",
+    "imagePath": null
+  },
+  {
+    "name": "KW",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.kwsuspensions.de",
+    "imagePath": null
+  },
+  {
+    "name": "Papier Sprick",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://papier-sprick.de",
+    "imagePath": null
+  },
+  {
+    "name": "Rosenberger",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.rosenberger.com/de/",
+    "imagePath": "/build/img/sponsors/rosenberger.png"
+  },
+  {
+    "name": "Sensata",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.sensata.com",
+    "imagePath": null
+  },
+  {
+    "name": "Würth Elektronik",
+    "rank": 5,
+    "level": "Sponsor (kleinstes)",
+    "website": "https://www.we-online.com/de",
+    "imagePath": null
+  },
+  {
+    "name": "STM",
+    "rank": 6,
+    "level": "andere",
+    "website": "https://www.st.com/content/st_com/en.html",
+    "imagePath": null
   }
 ]

@@ -65,12 +65,8 @@ onMounted(() => {
         @headerStateChange="handleHeaderState"
     />
 
-    <Menu
-        @toggle-orbit="handleOrbitToggle"
-    />
-
     <router-view v-slot="{ Component }">
-      <component :is="Component" />
+      <component :is="Component" :handleOrbitToggle="handleOrbitToggle"/>
     </router-view>
 
     <CookieBanner />

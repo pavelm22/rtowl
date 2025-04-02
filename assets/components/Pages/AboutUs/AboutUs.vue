@@ -146,7 +146,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="sponsor in firstThreeSponsors"
+          <div v-for="sponsor in platinSponsors"
                class="bg-white rounded-lg shadow-md p-6 flex items-center justify-center h-48 relative group transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
             <img :src="sponsor.imagePath" alt="Sponsor logo" class="max-h-16">
           </div>
@@ -180,8 +180,8 @@ const teamStructure = inject('teamStructure');
 const sponsorsData = inject('sponsorsData');
 import translations from './translations.json';
 
-const firstThreeSponsors = computed(() =>
-    sponsorsData.slice(0, 3)
+const platinSponsors = computed(() =>
+    sponsorsData.filter(sponsor => sponsor.rank === 1)
 )
 
 const leadershipTeam = computed(() =>

@@ -11,6 +11,11 @@ const translatedRoutes = [
         },
         children: [
             {
+                path: '',
+                name: 'home',
+                component: () => import('@/components/Pages/HomeMenu/HomeMenu.vue'),
+            },
+            {
                 path: 'about-us',
                 name: 'about',
                 component: () => import('../components/Pages/AboutUs/AboutUs.vue'),
