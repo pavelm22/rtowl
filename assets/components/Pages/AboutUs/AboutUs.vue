@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="flex justify-center">
-          <!--        <img src="/api/placeholder/500/400" alt="Racing car in workshop" class="rounded-lg object-cover max-h-96 border-2 border-red-600">-->
+          <img src="../../../assets/img/DSC09538-scaled.jpg" alt="Racing car in workshop" class="rounded-lg object-cover max-h-96 border-2 border-red-600">
         </div>
       </div>
     </section>
@@ -46,37 +46,13 @@
             engineering disciplines to create championship-winning formula cars.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Team Member 1 -->
           <div
-              class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
-            <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Alex Johnson</h3>
-              <p class="text-red-700 mb-4 font-semibold">Team Captain & Chief Engineer</p>
-              <p class="text-gray-300">Mechanical Engineering student with a passion for motorsport and vehicle
-                dynamics.</p>
-            </div>
-          </div>
-          <!-- Team Member 2 -->
-          <div
-              class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
-            <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Samantha Lee</h3>
-              <p class="text-red-700 mb-4 font-semibold">Powertrain Lead</p>
-              <p class="text-gray-300">Electrical Engineering student specializing in electric vehicle propulsion
-                systems.</p>
-            </div>
-          </div>
-          <!-- Team Member 3 -->
-          <div
-              class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-700 transition-all duration-300">
-            <!--          <img src="/api/placeholder/400/300" alt="Team member photo" class="w-full h-64 object-cover">-->
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Marcus Chen</h3>
-              <p class="text-red-700 mb-4 font-semibold">Aerodynamics Engineer</p>
-              <p class="text-gray-300">Aerospace Engineering student focused on computational fluid dynamics and aero
-                design.</p>
+              v-for="teamMember in leadershipTeam"
+              class="bg-white rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300 min-w-0 flex flex-col">
+            <img :src="teamMember.imagePath" alt="Team member photo" class="w-full h-64 object-contain">
+            <div class="p-6 bg-gray-900 flex-grow">
+              <h3 class="text-xl font-bold text-white">{{ teamMember.name }}</h3>
+              <p class="text-red-700 mb-4 font-semibold">{{ teamMember.position }}</p>
             </div>
           </div>
         </div>
@@ -169,30 +145,10 @@
             racing dreams possible.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
-          </div>
-          <div class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
-            <!--          <img src="/api/placeholder/150/50" alt="Sponsor logo" class="max-h-16">-->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div v-for="sponsor in firstThreeSponsors"
+               class="bg-gray-900 p-6 flex items-center justify-center h-32 rounded-lg">
+            <img :src="sponsor.imagePath" alt="Sponsor logo" class="max-h-16">
           </div>
         </div>
 
@@ -213,14 +169,23 @@
 </template>
 
 <script setup>
-import {onMounted} from 'vue'
+import {computed, inject, onMounted} from 'vue'
 import PageLayout from '../../PageLayout/PageLayout.vue'
 import Footer from '../../Footer/Footer.vue'
 import ContactCTA from '../../CTA/Contact/ContactCTA.vue'
 import ArrowIcon from "@/components/Icons/ArrowIcon.vue";
 import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
-// Component logic here
+const teamStructure = inject('teamStructure');
+const sponsorsData = inject('sponsorsData');
+
+const firstThreeSponsors = computed(() =>
+    sponsorsData.slice(0, 3)
+)
+
+const leadershipTeam = computed(() =>
+    teamStructure.find(team => team?.subTeam === 'Teamleitung')?.members ?? []
+);
 onMounted(() => {
   // Any component-specific initialization
 })

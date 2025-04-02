@@ -51,7 +51,6 @@
                 v-for="member in leadershipTeam"
                 :key="member.name"
                 class="bg-white rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300 min-w-0 flex flex-col">
-              <!-- flex-col hinzufügen -->
               >
               <div class="relative pt-[100%]">
                 <img
@@ -60,7 +59,7 @@
                     :alt="member.name"
                 />
               </div>
-              <div class="p-6 bg-gray-900 flex-grow"> <!-- flex-grow hinzufügen -->
+              <div class="p-6 bg-gray-900 flex-grow">
                 <h3 class="text-xl font-bold text-white">{{ member.name }}</h3>
                 <p class="text-red-600 mb-4 font-semibold">{{ member.position }}</p>
               </div>
