@@ -37,7 +37,28 @@ class ApiService
     public function getAllTeams(): JsonResponse
     {
         $teams = $this->teamService->getAll();
-        return new JsonResponse($this->serialize($teams));
+        $serializedTeams = [];
+        $serializedTeams['columns'] = [
+            ['key' => 'id', 'label' => 'ID'],
+            ['key' => 'year', 'label' => 'Year'],
+            ['key' => 'name', 'label' => 'Name'],
+            ['key' => 'vehicle', 'label' => 'Vehicle'],
+            ['key' => 'subTeams', 'label' => 'subTeams'],
+            ['key' => 'subTeams', 'label' => 'Sponsors'],
+        ];
+
+        foreach ($teams as $team) {
+            $serializedTeams['data'][] = [
+                'id' => $team->getId(),
+                'year' => $team->getYear(),
+                'name' => $team->getName(),
+                'vehicle' => $team->getVehicle(),
+                'subTeams' => $team->getSubTeams()->map(fn($subTeam) => $subTeam->getId())->toArray(),
+                'sponsors' => $team->getSponsors()->map(fn($sponsor) => $sponsor->getId())->toArray(),
+            ];
+        }
+
+        return new JsonResponse($serializedTeams);
     }
 
     public function getTeamById(int $id): JsonResponse
@@ -48,7 +69,7 @@ class ApiService
             return new JsonResponse(['error' => 'Team not found'], 404);
         }
 
-        return new JsonResponse($this->serialize($team));
+        return new JsonResponse($team);
     }
 
     public function getTeamDetailsById(int $id): JsonResponse
@@ -65,7 +86,7 @@ class ApiService
     public function createTeam(array $data): JsonResponse
     {
         $team = $this->teamService->create($data);
-        return new JsonResponse($this->serialize($team), 201);
+        return new JsonResponse($team, 201);
     }
 
     public function updateTeam(int $id, array $data): JsonResponse
@@ -76,7 +97,7 @@ class ApiService
             return new JsonResponse(['error' => 'Team not found'], 404);
         }
 
-        return new JsonResponse($this->serialize($team));
+        return new JsonResponse($team);
     }
 
     public function deleteTeam(int $id): JsonResponse
@@ -96,7 +117,7 @@ class ApiService
     public function getAllSponsors(): JsonResponse
     {
         $sponsors = $this->sponsorService->getAll();
-        return new JsonResponse($this->serialize($sponsors));
+        return new JsonResponse($sponsors);
     }
 
     public function getSponsorById(int $id): JsonResponse
@@ -107,13 +128,13 @@ class ApiService
             return new JsonResponse(['error' => 'Sponsor not found'], 404);
         }
 
-        return new JsonResponse($this->serialize($sponsor));
+        return new JsonResponse($sponsor);
     }
 
     public function createSponsor(array $data): JsonResponse
     {
         $sponsor = $this->sponsorService->create($data);
-        return new JsonResponse($this->serialize($sponsor), 201);
+        return new JsonResponse($sponsor, 201);
     }
 
     public function updateSponsor(int $id, array $data): JsonResponse
@@ -124,7 +145,7 @@ class ApiService
             return new JsonResponse(['error' => 'Sponsor not found'], 404);
         }
 
-        return new JsonResponse($this->serialize($sponsor));
+        return new JsonResponse($sponsor);
     }
 
     public function deleteSponsor(int $id): JsonResponse
@@ -136,17 +157,5 @@ class ApiService
         }
 
         return new JsonResponse(null, 204);
-    }
-
-    /**
-     * Hilfsmethode zum Serialisieren von Objekten in JSON
-     */
-    private function serialize($data)
-    {
-        return json_decode($this->serializer->serialize($data, 'json', [
-            'circular_reference_handler' => function ($object) {
-                return $object->getId();
-            }
-        ]), true);
     }
 }
