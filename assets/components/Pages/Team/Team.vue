@@ -47,7 +47,7 @@
           <div
               v-for="member in leadershipTeam"
               :key="member.name"
-              class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300"
+              class="bg-white rounded-lg overflow-hidden border border-gray-800 hover:border-red-600 transition-all duration-300"
           >
             <div class="relative pt-[100%]">
               <img
@@ -56,7 +56,7 @@
                   :alt="member.name"
               />
             </div>
-            <div class="p-6">
+            <div class="p-6 bg-gray-900">
               <h3 class="text-xl font-bold text-white">{{ member.name }}</h3>
               <p class="text-red-600 mb-4 font-semibold">{{ member.position }}</p>
             </div>
@@ -96,13 +96,13 @@
               class="text-center"
           >
             <h3 class="text-2xl font-bold mb-6">{{ team.subTeam }}</h3>
-            <p class="mb-12 max-w-3xl mx-auto text-gray-700">{{ team.description }}</p>
+            <p class="max-w-3xl mx-auto text-gray-700">{{ team.description }}</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div
                   v-for="member in team.members"
                   :key="member.name"
-                  class="bg-gray-100 rounded-lg overflow-hidden border border-gray-200 hover:border-red-600 hover:shadow-lg transition-all duration-300"
+                  class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-red-600 hover:shadow-lg transition-all duration-300"
               >
                 <div class="relative pt-[100%]">
                   <img
@@ -113,7 +113,7 @@
                 </div>
                 <div class="p-6">
                   <h4 class="text-xl font-bold">{{ member.name }}</h4>
-                  <p class="text-red-600 mb-4 font-semibold">{{ member.position }}</p>
+                  <p class="text-gray-700 mb-4 font-semibold">{{ member.position }}</p>
                 </div>
               </div>
             </div>

@@ -1,14 +1,14 @@
 // src/router.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
+const homeRoutes = [
     {
         path: '/',
         name: 'home',
         component: () => import('../views/HomeView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Home'
+            title: 'Home'
         }
     },
     {
@@ -17,7 +17,7 @@ const routes = [
         component: () => import('../views/AboutUsView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Über Uns'
+            title: 'Über Uns'
         }
     },
     {
@@ -26,7 +26,7 @@ const routes = [
         component: () => import('../views/SponsorsView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Sponsoren'
+            title: 'Sponsoren'
         }
     },
     {
@@ -35,7 +35,7 @@ const routes = [
         component: () => import('../views/TeamView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Team'
+            title: 'Team'
         }
     },
     {
@@ -44,7 +44,7 @@ const routes = [
         component: () => import('../views/DataPolicyView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Datenschutz'
+            title: 'Datenschutz'
         }
     },
     {
@@ -53,7 +53,7 @@ const routes = [
         component: () => import('../views/LegalNoticeView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Impressum'
+            title: 'Impressum'
         }
     },
     {
@@ -62,9 +62,12 @@ const routes = [
         component: () => import('../views/ContactView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Kontakt'
+            title: 'Kontakt'
         }
     },
+]
+
+const dashboardRoutes = [
     {
         path: '/dashboard',
         component: () => import('../views/DashboardView.vue'),
@@ -75,7 +78,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Overview.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Overview'
                 }
             },
             {
@@ -84,7 +87,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Team.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Team'
                 }
             },
             {
@@ -93,7 +96,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Sponsors.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Sponsors'
                 }
             },
             {
@@ -102,15 +105,19 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/TeamMember.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Team Member'
                 }
             }
         ],
         meta: {
             showThreeScene: false,
-            title: 'OWL Racing - Dashboard'
+            title: 'Dashboard'
         }
     },
+]
+const routes = [
+    ...homeRoutes,
+    ...dashboardRoutes,
     // Catch-all route for 404
     {
         path: '/:pathMatch(.*)*',

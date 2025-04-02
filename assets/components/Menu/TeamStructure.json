@@ -5,12 +5,12 @@
       {
         "name": "Paul Hausmann",
         "position": "Team Leader / Marketing Leader",
-        "imagePath": "@/img/teammember/Paul-Hausmann-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Paul-Hausmann-scaled.jpg"
       },
       {
         "name": "Lemmi",
         "position": "Maskottchen / Held",
-        "imagePath": "@/img/teammember/Lemmi-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Lemmi-scaled.jpg"
       }
     ]
   },
@@ -21,52 +21,52 @@
       {
         "name": "Till Söffgen",
         "position": "Powertrain Leader / Baugruppenverantwortung HV-Akku",
-        "imagePath": "@/img/teammember/Till-Soeffgen-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Till-Soeffgen-2-scaled.jpg"
       },
       {
         "name": "Tiziano Humpert",
         "position": "Powertrain Leader",
-        "imagePath": "@/img/teammember/Tiziano-Humpert-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Tiziano-Humpert-scaled.jpg"
       },
       {
         "name": "Julius Berghoff",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Julius-Berghoff-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Julius-Berghoff-2-scaled.jpg"
       },
       {
         "name": "Felix Kortekamp",
         "position": "Kabelbaum",
-        "imagePath": "@/img/teammember/Felix-Kortekamp-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Felix-Kortekamp-2-scaled.jpg"
       },
       {
         "name": "Philipp Richards",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Phillip-Richards-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Phillip-Richards-2-scaled.jpg"
       },
       {
         "name": "Aaron Brosterhus",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Aaron-Brosterhus-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Aaron-Brosterhus-scaled.jpg"
       },
       {
         "name": "Colin Voigt",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Colin-Voigt-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Colin-Voigt-scaled.jpg"
       },
       {
         "name": "Maximillian Weiß",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Maximillian-Weiss-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Maximillian-Weiss-2-scaled.jpg"
       },
       {
         "name": "Luca Hermann",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Luca-Hermann-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Luca-Hermann-scaled.jpg"
       },
       {
         "name": "Benjamin Dahmen",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Benjamin-Dahmen-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Benjamin-Dahmen-scaled.jpg"
       }
     ]
   },
@@ -77,32 +77,32 @@
       {
         "name": "Robin Glück",
         "position": "Mechanics Leader",
-        "imagePath": "@/img/teammember/Robin-Glueck-2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Robin-Glueck-2-scaled.jpg"
       },
       {
         "name": "Fabian Tapper",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Fabian-Tapper2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Fabian-Tapper2-scaled.jpg"
       },
       {
         "name": "Alexander Löwen",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Alexander-Loewen-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Alexander-Loewen-scaled.jpg"
       },
       {
         "name": "Maybritt Pahmeyer",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Maybritt_Pahmeyer2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Maybritt_Pahmeyer2-scaled.jpg"
       },
       {
         "name": "Katharina Genz",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/KatharinaGenz2-1-scaled.jpg"
+        "imagePath": "/_static/img/teammember/KatharinaGenz2-1-scaled.jpg"
       },
       {
         "name": "Jannik Bizot",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Platzhalter-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Platzhalter-scaled.jpg"
       }
     ]
   },
@@ -113,12 +113,12 @@
       {
         "name": "Lena Künnemeyer",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Lena_Kuennemeyer-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Lena_Kuennemeyer-scaled.jpg"
       },
       {
         "name": "Georg Niagkoules",
         "position": "Teamcrew",
-        "imagePath": "@/img/teammember/Georg-Niagkoules2-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Georg-Niagkoules2-scaled.jpg"
       }
     ]
   },
@@ -129,7 +129,7 @@
       {
         "name": "Anessa Omeragic",
         "position": "Finance & Sponsoring",
-        "imagePath": "@/img/teammember/Anessa-Omeragic-scaled.jpg"
+        "imagePath": "/_static/img/teammember/Anessa-Omeragic-scaled.jpg"
       }
     ]
   }
