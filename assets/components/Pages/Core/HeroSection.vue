@@ -1,9 +1,6 @@
 <template>
   <section class="relative">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-transparent"></div>
-    </div>
-    <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
+    <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative">
       <span class="inline-block py-1 px-3 mb-4 bg-red-700 text-black font-bold text-xs uppercase tracking-widest">{{ badge }}</span>
       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl" v-html="formattedHeadline"></h1>
       <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">{{ description }}</p>
@@ -13,7 +10,6 @@
     </div>
   </section>
 </template>
-
 <script>
 export default {
   name: 'HeroSection',

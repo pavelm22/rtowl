@@ -1,21 +1,14 @@
 <template>
   <PageLayout :show="true">
-    <section class="relative">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-      </div>
-      <div class="max-w-screen-xl px-4 py-32 mx-auto flex flex-col items-start text-left lg:py-48 relative z-10">
-        <span class="inline-block py-1 px-3 mb-4 bg-red-600 text-black font-bold text-xs uppercase tracking-widest">OWL Racing Team</span>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">DAS<br>TEAM
-        </h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 max-w-lg">
-          Entdecken Sie die Leidenschaft und Präzision des OWL Racing-Teams.
-          Begleiten Sie uns auf unserer Reise von der Konzeption bis zur
-          Ziellinie – ein Pfad, gepflastert mit Innovation, Teamgeist und
-          Geschwindigkeit.
-        </p>
-      </div>
-    </section>
+    <HeroSection class="hero-section" :badge="'OWL RACING TEAM'"
+                 :headline="'DAS \n TEAM'"
+                 :description="'Entdecken Sie die Leidenschaft und Präzision des OWL Racing-Teams.\n'+
+'          Begleiten Sie uns auf unserer Reise von der Konzeption bis zur\n'+
+'          Ziellinie – ein Pfad, gepflastert mit Innovation, Teamgeist und\n'+
+'          Geschwindigkeit.'"
+                 :button-text="'OUR TEAM'"
+                 :button-link="'#team'"
+    />
 
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -32,7 +25,7 @@
         <div class="relative">
           <img class="w-full h-auto object-cover rounded-lg shadow-2xl"
                src="../../../assets/img/OWL-RacingTeam_November-scaled.jpg" alt="OWL Racing Team"/>
-          <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-transparent opacity-20 rounded-lg"></div>
+          <div class="absolute inset-0 rounded-lg"></div>
         </div>
       </div>
     </section>
@@ -139,6 +132,7 @@ import {computed, onMounted, ref, inject} from "vue";
 import ContactCTA from "../../CTA/Contact/ContactCTA.vue";
 import Footer from "../../Footer/Footer.vue";
 import PageLayout from "@/components/PageLayout/PageLayout.vue";
+import HeroSection from "@/components/Pages/Core/HeroSection.vue";
 
 const teamStructure = inject('teamStructure');
 const activeTab = ref('');
@@ -162,5 +156,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add any specific styles here */
+.hero-section {
+  will-change: transform, opacity;
+}
 </style>
