@@ -1,70 +1,86 @@
 // src/router.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
+const translatedRoutes = [
     {
-        path: '/',
-        name: 'home',
-        component: () => import('../views/HomeView.vue'),
+        path: '/:lang(de|en)?',
+        name: 'public_view',
+        component: () => import('../views/PublicView.vue'),
         meta: {
             showThreeScene: true,
-            title: 'OWL Racing - Home'
-        }
-    },
-    {
-        path: '/about-us',
-        name: 'aboutUs',
-        component: () => import('../views/AboutUsView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Über Uns'
-        }
-    },
-    {
-        path: '/sponsors',
-        name: 'sponsors',
-        component: () => import('../views/SponsorsView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Sponsoren'
-        }
-    },
-    {
-        path: '/team',
-        name: 'team',
-        component: () => import('../views/TeamView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Team'
-        }
-    },
-    {
-        path: '/data-policy',
-        name: 'data_policy',
-        component: () => import('../views/DataPolicyView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Datenschutz'
-        }
-    },
-    {
-        path: '/legal-notice',
-        name: 'legal_notice',
-        component: () => import('../views/LegalNoticeView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Impressum'
-        }
-    },
-    {
-        path: '/contact',
-        name: 'contact',
-        component: () => import('../views/ContactView.vue'),
-        meta: {
-            showThreeScene: true,
-            title: 'OWL Racing - Kontakt'
-        }
-    },
+        },
+        children: [
+            {
+                path: 'about-us',
+                name: 'about',
+                component: () => import('../components/Pages/AboutUs/AboutUs.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'about-us',
+                        de: 'ueber-uns'
+                    }
+                }
+            },
+            {
+                path: 'sponsors',
+                name: 'sponsors',
+                component: () => import('../components/Pages/Sponsors/Sponsors.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'sponsors',
+                        de: 'sponsoren'
+                    }
+                }
+            },
+            {
+                path: 'team',
+                name: 'team',
+                component: () => import('../components/Pages/Team/Team.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'team',
+                        de: 'team'
+                    },
+                }
+            },
+            {
+                path: 'data-policy',
+                name: 'data_policy',
+                component: () => import('../components/Pages/Sponsors/Sponsors.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'data-policy',
+                        de: 'datenschutz'
+                    },
+                }
+            },
+            {
+                path: 'legal-notice',
+                name: 'legal_notice',
+                component: () => import('../components/Pages/LegalNotice/LegalNotice.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'legal-notice',
+                        de: 'impressum'
+                    },
+                }
+            },
+            {
+                path: 'contact',
+                name: 'contact',
+                component: () => import('../components/Pages/Contact/Contact.vue'),
+                meta: {
+                    urlNames: {
+                        en: 'contact',
+                        de: 'kontakt'
+                    }
+                }
+            }
+        ]
+    }
+]
+
+const dashboardRoutes = [
     {
         path: '/dashboard',
         component: () => import('../views/DashboardView.vue'),
@@ -75,7 +91,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Overview.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Overview'
                 }
             },
             {
@@ -84,7 +100,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Team.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Team'
                 }
             },
             {
@@ -93,7 +109,7 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/Sponsors.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Sponsors'
                 }
             },
             {
@@ -102,15 +118,19 @@ const routes = [
                 component: () => import('@/components/Dashboard/Views/TeamMember.vue'),
                 meta: {
                     showThreeScene: false,
-                    title: 'OWL Racing - Dashboard'
+                    title: 'Dashboard - Team Member'
                 }
             }
         ],
         meta: {
             showThreeScene: false,
-            title: 'OWL Racing - Dashboard'
+            title: 'Dashboard'
         }
     },
+]
+const routes = [
+    ...translatedRoutes,
+    ...dashboardRoutes,
     // Catch-all route for 404
     {
         path: '/:pathMatch(.*)*',

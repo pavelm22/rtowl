@@ -1,9 +1,16 @@
 <template>
-  <div class="absolute w-full h-screen">
-    <canvas ref="sceneCanvas" class="w-full h-screen"></canvas>
-  </div>
+    <canvas ref="sceneCanvas"></canvas>
 </template>
-
+<style scoped>
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: translate3d(0,0,0.1px);
+  contain: strict;
+}
+</style>
 <script setup>
 import {ref, onMounted, onBeforeUnmount, watch} from 'vue'
 import * as THREE from 'three'
@@ -236,7 +243,11 @@ defineExpose({toggleOrbitMode})
 onMounted(() => {
   renderer = new THREE.WebGLRenderer({
     antialias: true,
-    canvas: sceneCanvas.value
+    canvas: sceneCanvas.value,
+    alpha: true,
+    powerPreference: "high-performance",
+    stencil: false,
+    depth: true
   })
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setClearColor(0x000000)

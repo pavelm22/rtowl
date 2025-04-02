@@ -1,0 +1,151 @@
+{
+  "mission": {
+    "tagline": {
+      "en": "Our mission",
+      "de": "Unsere Mission"
+    },
+    "title": {
+      "en": "PUSHING THE LIMITS OF INNOVATION AND PERFORMANCE",
+      "de": "DIE GRENZEN VON INNOVATION UND LEISTUNG ERWEITERN"
+    },
+    "description": [
+      {
+        "en": "Founded in 2012, our Formula Student Racing Club has been competing in international Formula Student competitions, representing our university with pride and determination.",
+        "de": "Gegründet im Jahr 2012, nimmt unser Formula Student Racing Club an internationalen Formula Student Wettbewerben teil und vertritt unsere Universität mit Stolz und Entschlossenheit."
+      },
+      {
+        "en": "We bring together students from engineering, design, business, and marketing to create a comprehensive team that handles every aspect of designing, manufacturing, testing, and racing our formula-style vehicles.",
+        "de": "Wir vereinen Studierende aus den Bereichen Ingenieurwesen, Design, Wirtschaft und Marketing, um ein umfassendes Team zu bilden, das alle Aspekte der Konstruktion, Herstellung, Tests und des Rennens unserer Formula-Fahrzeuge übernimmt."
+      }
+    ],
+    "points": [
+      {
+        "en": "Student-led engineering excellence",
+        "de": "Von Studierenden geführte ingenieurtechnische Exzellenz"
+      },
+      {
+        "en": "Real-world application of academic knowledge",
+        "de": "Praktische Anwendung akademischen Wissens"
+      },
+      {
+        "en": "Fostering teamwork and leadership",
+        "de": "Förderung von Teamarbeit und Führungskompetenz"
+      }
+    ]
+  },
+  "team": {
+    "tagline": {
+      "en": "Our team",
+      "de": "Unser Team"
+    },
+    "title": {
+      "en": "THE DRIVING FORCE BEHIND OUR SUCCESS",
+      "de": "DIE TRIEBKRAFT HINTER UNSEREM ERFOLG"
+    },
+    "description": {
+      "en": "Our diverse team brings together expertise from various engineering disciplines to create championship-winning formula cars.",
+      "de": "Unser vielfältiges Team vereint Expertise aus verschiedenen Ingenieurdisziplinen, um meisterschaftswürdige Formula-Fahrzeuge zu entwickeln."
+    },
+    "button": {
+      "en": "MEET THE FULL TEAM",
+      "de": "DAS GANZE TEAM KENNENLERNEN"
+    }
+  },
+  "achievements": {
+    "tagline": {
+      "en": "Our achievements",
+      "de": "Unsere Erfolge"
+    },
+    "title": {
+      "en": "RACING TO EXCELLENCE",
+      "de": "AUF DEM WEG ZUR SPITZE"
+    },
+    "description": {
+      "en": "Each season brings new challenges and opportunities for innovation as we develop our next generation racing machine.",
+      "de": "Jede Saison bringt neue Herausforderungen und Innovationsmöglichkeiten, während wir unsere nächste Generation von Rennfahrzeugen entwickeln."
+    },
+    "cars": {
+      "fsx24": {
+        "title": "FS-X24",
+        "description": {
+          "en": "Our latest electric vehicle featuring advanced aerodynamics and a custom battery management system.",
+          "de": "Unser neuestes Elektrofahrzeug mit fortschrittlicher Aerodynamik und einem maßgeschneiderten Batteriemanagementsystem."
+        },
+        "achievements": [
+          {
+            "en": "2nd Place - Formula Student Germany",
+            "de": "2. Platz - Formula Student Deutschland"
+          },
+          {
+            "en": "1st Place - Design Event",
+            "de": "1. Platz - Design Event"
+          },
+          {
+            "en": "Efficiency Award Winner",
+            "de": "Gewinner des Efficiency Awards"
+          }
+        ]
+      },
+      "fsx23": {
+        "title": "FS-X23",
+        "description": {
+          "en": "Our breakthrough electric vehicle with lightweight composite chassis and adaptive suspension.",
+          "de": "Unser bahnbrechendes Elektrofahrzeug mit Leichtbau-Chassis aus Verbundwerkstoffen und adaptiver Federung."
+        },
+        "achievements": [
+          {
+            "en": "3rd Place Overall - Formula Student UK",
+            "de": "3. Platz Gesamtwertung - Formula Student UK"
+          },
+          {
+            "en": "1st Place - Acceleration Event",
+            "de": "1. Platz - Beschleunigungs-Event"
+          },
+          {
+            "en": "Best Newcomer Award",
+            "de": "Bester Newcomer Award"
+          }
+        ]
+      },
+      "fsx22": {
+        "title": "FS-X22",
+        "description": {
+          "en": "Our first competition vehicle featuring a combustion engine and custom ECU programming.",
+          "de": "Unser erstes Wettbewerbsfahrzeug mit Verbrennungsmotor und individueller ECU-Programmierung."
+        },
+        "achievements": [
+          {
+            "en": "8th Place Overall - Formula Student Italy",
+            "de": "8. Platz Gesamtwertung - Formula Student Italien"
+          },
+          {
+            "en": "4th Place - Endurance Event",
+            "de": "4. Platz - Ausdauer-Event"
+          },
+          {
+            "en": "Cost Analysis Award",
+            "de": "Preis für Kostenanalyse"
+          }
+        ]
+      }
+    }
+  },
+  "sponsors": {
+    "tagline": {
+      "en": "Our sponsors",
+      "de": "Unsere Sponsoren"
+    },
+    "title": {
+      "en": "POWERED BY PARTNERS",
+      "de": "UNTERSTÜTZT DURCH PARTNER"
+    },
+    "description": {
+      "en": "We are grateful for the support of our sponsors who make our racing dreams possible.",
+      "de": "Wir sind dankbar für die Unterstützung unserer Sponsoren, die unsere Rennsportträume möglich machen."
+    },
+    "button": {
+      "en": "BECOME A SPONSOR",
+      "de": "SPONSOR WERDEN"
+    }
+  }
+}
